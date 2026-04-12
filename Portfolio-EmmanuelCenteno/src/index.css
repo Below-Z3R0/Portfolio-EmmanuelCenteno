@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  /* --- BASE NEUTRA (Uniforme) --- */
+  --bg-page: #09090b;          /* Zinc 950: El estándar de oro moderno */
+  --bg-card: #121214;          /* Un paso arriba, muy sutil */
+  --bg-surface: #18181b;       /* Para elementos que flotan */
+  
+  /* --- TEXTO (Equilibrado) --- */
+  --text-main: #fafafa;        /* Blanco casi puro para títulos */
+  --text-body: #a1a1aa;        /* Gris zinc para lectura */
+  --text-muted: #52525b;       /* Para lo que no debe distraer */
+
+  /* --- ACENTO ÚNICO (Consistente) --- */
+  --accent: #8b5cf6;           /* Violeta elegante */
+  --accent-soft: rgba(139, 92, 246, 0.1);
+  
+  /* --- BORDES (Efecto Pinterest) --- */
+  --border-subtle: rgba(39, 39, 42, 0.6); /* Zinc 800 con transparencia */
+  --border-glow: rgba(139, 92, 246, 0.3); 
+  --text-footer: #71717a; /* Un gris más suave para el pie de página */
+}
+
+@theme {
+  --color-page: var(--bg-page);
+  --color-card: var(--bg-card);
+  --color-surface: var(--bg-surface);
+  
+  --color-main: var(--text-main);
+  --color-dim: var(--text-body);
+  --color-muted: var(--text-muted);
+  
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  
+  --color-border-subtle: var(--border-subtle);
+  --color-border-glow: var(--border-glow);
+
+  --font-display: "Inter", sans-serif;
+  --breakpoint-qw: 921px;
+}
+
+.light {
+  --bg: white;
+  --text: black;
+}
+
+.dark {
+  --bg: #16171d;
+  --text: #9ca3af;
+}
+
+
+:root {
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg-page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+}*/
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: calc(var(--spacing) * 5)
+    /* 1.25rem = 20px */
+  ;
+  padding-right: calc(var(--spacing) * 5)
+    /* 1.25rem = 20px */
+  ;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  padding-block: calc(var(--spacing) * 15)
+    /* 3.75rem = 60px */
+}
+
+input {
+  --tw-outline-style: none;
+  outline-style: none;
+}
