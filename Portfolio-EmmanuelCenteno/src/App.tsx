@@ -1,23 +1,23 @@
 import './App.css';
-import type { Theme } from './types/types.ts';
-import { useState, useEffect } from 'react';
+//import type { Theme } from './types/types.ts';
+//import { useState, useEffect } from 'react';
 import { NavData, FormData, ProyectCardData, ProyectCardDataSM, ContactsData, TecnologiesData } from './index.ts'
 import { LinkButton, Title1, Title3, Title4, Button, ProyectCard, NormalPrght, Formulary, TecnologiesCard } from './index.ts'
 
 function App() {
-  const [theme, setTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') {
-      return saved as Theme;
-    }
-    return 'dark';
-  });
+//  const [theme, setTheme] = useState<Theme>(() => {
+//    const saved = localStorage.getItem('theme');
+//    if (saved === 'dark' || saved === 'light') {
+//      return saved as Theme;
+//    }
+//    return 'dark';
+//  });
 
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.className = theme;
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+//  useEffect(() => {
+//    const root = window.document.documentElement;
+//    root.className = theme;
+//    localStorage.setItem('theme', theme);
+//  }, [theme]);
 
   return (
     <div className='bg-page text-main min-h-screen font-display selection:bg-accent/30'>
