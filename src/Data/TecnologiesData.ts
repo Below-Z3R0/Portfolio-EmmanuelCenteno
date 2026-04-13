@@ -1,58 +1,63 @@
-export const TecnologiesData = {
+import type { TecnologiesDataConfig } from '../index';
+import { GitHubIcon, GitIcon, HTML5Icon, FigmaIcon, NodeIcon, PostGresSQLIcon, ReactIcon, SupaBaseIcon, TailwindIcon, TypeScriptIcon } from '../Assets/Icons';
+export const TecnologiesData: TecnologiesDataConfig = {
     Frontend: [
         {
             name: 'React',
-            icon: 'React.svg', 
+            icon: ReactIcon,
             color: '#61DAFB',
         },
         {
             name: 'TypeScript',
-            icon: 'TypeScript.svg', 
+            icon: TypeScriptIcon,
             color: '#3178C6',
         },
         {
             name: 'Tailwind CSS',
-            icon: 'Tailwind CSS.svg',
+            icon: TailwindIcon,
             color: '#06B6D4',
         },
         {
+            name: 'Figma',
+            icon: FigmaIcon,
+        },
+        {
             name: 'HTML5',
-            icon: 'HTML5.svg',
-            color: '#E34F26',
+            icon: HTML5Icon,
         },
     ],
     Backend: [
         {
             name: 'Node.js',
-            icon: 'nodejs.svg',
+            icon: NodeIcon,
             color: '#339933',
         },
         {
             name: 'PostgresSQL',
-            icon: 'PostgresSQL.svg', 
+            icon: PostGresSQLIcon,
             color: '#4169E1',
         },
         {
             name: 'Supabase',
-            icon: 'SupaBase.png', 
+            icon: SupaBaseIcon,
             color: '#3ECF8E',
         },
     ],
     DevOps: [
         {
             name: 'GitHub',
-            icon: 'GitHub.svg',
-            color: '#FFFFFF',
+            icon: GitHubIcon,
+            color: '#181616',
         },
         {
             name: 'Git',
-            icon: 'Git.svg',
+            icon: GitIcon,
             color: '#F05032',
         },
-//        {
-//            name: 'Docker',
-//            icon: 'Docker.svg',
-//            color: '#2496ED',
-//        },
+        //        {
+        //            name: 'Docker',
+        //            icon: 'Docker.svg',
+        //            color: '#2496ED',
+        //        },
     ],
 };

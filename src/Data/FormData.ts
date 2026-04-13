@@ -1,6 +1,10 @@
-import type { FieldConfig } from ".."
-export const FormData: FieldConfig[] = [
-    {id: 1, name: "Nombre", label: "Nombre completo", type: "text", placeholder: "Ingresa tu nombre"},
-    {id: 2, name: "Correo", label: "Direccion de correo", type: "email", placeholder: "Ingresa tu correo"},
-//    {id: 3, name: "Mensaje", label: "Tu mensaje", type: "string", placeholder: "Escribe tu mensaje aquí"}
-]
+import type { FormDataConfig } from "../types/types"
+
+export const FormData: FormDataConfig = {
+    top: [
+        { name: "name", label: "Nombre completo", type: "text", placeholder: "Ingresa tu nombre" },
+        { name: "user_email", label: "Direccion de correo", type: "email", placeholder: "Ingresa tu correo" },
+        { name: "title", label: "Asunto", type: "text", placeholder: "Asunto" },
+    ],
+    bottom: { name: "message", label: "Tu mensaje", type: "text", placeholder: "Escribe tu mensaje aquí" },
+}

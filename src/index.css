@@ -1,55 +1,88 @@
 @import "tailwindcss";
 
-:root {
-  /* --- BASE NEUTRA (Uniforme) --- */
-  --bg-page: #09090b;          /* Zinc 950: El estándar de oro moderno */
-  --bg-card: #121214;          /* Un paso arriba, muy sutil */
-  --bg-surface: #18181b;       /* Para elementos que flotan */
-  
-  /* --- TEXTO (Equilibrado) --- */
-  --text-main: #fafafa;        /* Blanco casi puro para títulos */
-  --text-body: #a1a1aa;        /* Gris zinc para lectura */
-  --text-muted: #52525b;       /* Para lo que no debe distraer */
-
-  /* --- ACENTO ÚNICO (Consistente) --- */
-  --accent: #8b5cf6;           /* Violeta elegante */
-  --accent-soft: rgba(139, 92, 246, 0.1);
-  
-  /* --- BORDES (Efecto Pinterest) --- */
-  --border-subtle: rgba(39, 39, 42, 0.6); /* Zinc 800 con transparencia */
-  --border-glow: rgba(139, 92, 246, 0.3); 
-  --text-footer: #71717a; /* Un gris más suave para el pie de página */
-}
-
 @theme {
+  --color-Theme: var(--bg-Theme);
   --color-page: var(--bg-page);
   --color-card: var(--bg-card);
   --color-surface: var(--bg-surface);
-  
   --color-main: var(--text-main);
   --color-dim: var(--text-body);
   --color-muted: var(--text-muted);
-  
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
-  
   --color-border-subtle: var(--border-subtle);
   --color-border-glow: var(--border-glow);
 
   --font-display: "Inter", sans-serif;
+
   --breakpoint-qw: 921px;
+
+/*  --transition-theme: 0.3s cubic-bezier(0.4, 0, 0.2, 1);*/
+}
+/*@utility transition-ui {
+  transition: 
+    background-color var(--transition-theme),
+    border-color var(--transition-theme),
+    color var(--transition-theme),
+    box-shadow var(--transition-theme);
+}*/
+
+/* Themes */
+.Dark {
+  --bg-Theme: #52525b;
+  /* --- NEUTRAL BASE (Uniform) --- */
+  --bg-page: #09090b;   /* Zinc 950: standard */
+  --bg-card: #121214;   /* One step up, very subtle */
+  --bg-surface: #18181b; /* For floating elements */
+
+  /* --- TEXT (Balanced) --- */
+  --text-main: #fafafa; /* Almost pure white for titles */
+  --text-body: #a1a1aa; /* Zinc gray for body text */
+  --text-muted: #52525b; /* For non-distracting elements */
+
+  /* --- UNIQUE ACCENT (Consistent) --- */
+  --accent: #8b5cf6;    /* Elegant Violet */
+  --accent-soft: rgba(139, 92, 246, 0.1);
+
+  /* --- BORDERS (Pinterest Effect) --- */
+  --border-subtle: rgba(39, 39, 42, 0.6); /* Zinc 800 with transparency */
+  --border-glow: rgba(139, 92, 246, 0.3);
+  --text-footer: #71717a; /* Softer gray for the footer */
 }
 
-.light {
-  --bg: white;
-  --text: black;
+.Light {
+  /* --- NEUTRAL BASE (Clean and modern) --- */
+  --bg-page: #ffffff;   /* Pure white for maximum clarity */
+  --bg-card: #f9fafb;   /* Very light gray for cards (Slate 50) */
+  --bg-surface: #f3f4f6; /* For floating elements or hovers */
+
+  /* --- TEXT (High contrast but not aggressive) --- */
+  --text-main: #09090b; /* Zinc 950 for titles */
+  --text-body: #3f3f46; /* Zinc 700 for comfortable reading */
+  --text-muted: #71717a; /* Zinc 500 for secondary details */
+
+  /* --- UNIQUE ACCENT (Brand consistent) --- */
+  --accent: #7c3aed;    /* Slightly more vibrant violet for white backgrounds */
+  --accent-soft: rgba(124, 58, 237, 0.1);
+
+  /* --- BORDERS (Subtle and defined) --- */
+  --border-subtle: rgba(228, 228, 231, 0.8); /* Zinc 200: noticeable but clean */
+  --border-glow: rgba(124, 58, 237, 0.2);
+  --text-footer: #a1a1aa; /* Soft gray for the footer */
 }
 
-.dark {
-  --bg: #16171d;
-  --text: #9ca3af;
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: calc(var(--spacing) * 5);  /* 1.25rem = 20px */
+  padding-right: calc(var(--spacing) * 5); /* 1.25rem = 20px */
 }
-
 
 :root {
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -71,39 +104,6 @@
   }
 }
 
-/*@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-}*/
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding-left: calc(var(--spacing) * 5)
-    /* 1.25rem = 20px */
-  ;
-  padding-right: calc(var(--spacing) * 5)
-    /* 1.25rem = 20px */
-  ;
-}
-
 body {
   margin: 0;
 }
@@ -117,8 +117,7 @@ a {
 }
 
 .section {
-  padding-block: calc(var(--spacing) * 15)
-    /* 3.75rem = 60px */
+  padding-block: calc(var(--spacing) * 15); /* 3.75rem = 60px */
 }
 
 input {

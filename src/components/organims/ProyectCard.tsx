@@ -1,5 +1,5 @@
-import { Button, LinkButton, Title2, NormalPrght, TecnologiesCard } from "../index"
-import type { ProyectProps } from "../index"
+import { Button, LinkButton, Title2, NormalPrght, TecnologiesCard } from "../../index"
+import type { ProyectProps } from "../../index"
 
 interface ProyectCardBigProps {
     data: ProyectProps;
@@ -36,7 +36,7 @@ export function ProyectCard({ data }: ProyectCardBigProps) {
                         <div className="flex qw:gap-2 gap-4">
                             {data.tecnologies.map((item, index) => (
                                 <TecnologiesCard key={index}
-                                    cardSize="!rounded-none !bg-transparent !border-none !backdrop-blur-none !shadow-transparent !p-0 !hover:bg-transparent !h-6 !w-6"
+                                    cardSize="!rounded-none !bg-transparent !border-none !backdrop-blur-none !shadow-transparent !p-0 !hover:bg-transparent !h-6 !w-6 cursor-pointer"
                                     imgSize="!size-full !object-cover opacity-80 hover:opacity-100 transition-opacity"
                                     icon={item.icon}
                                     color={item.color}
@@ -44,7 +44,7 @@ export function ProyectCard({ data }: ProyectCardBigProps) {
                             ))}
                         </div>
                         <Button
-                            className="qw:h-8 qw:w-20 h-10 w-24 rounded-full bg-surface border border-border-subtle text-dim text-[10px] font-bold uppercase tracking-widest transition-all duration-300 hover:border-accent hover:text-main hover:shadow-[0_0_15px_rgba(139,92,246,0.2)]"
+                            className=" cursor-pointer qw:h-8 qw:w-20 h-10 w-24 rounded-full bg-surface border border-border-subtle text-dim text-[10px] font-bold uppercase tracking-widest transition-all duration-300 hover:border-accent hover:text-main hover:shadow-[0_0_15px_rgba(139,92,246,0.2)]"
                             txt="Return"
                         />
                     </div>
@@ -52,9 +52,9 @@ export function ProyectCard({ data }: ProyectCardBigProps) {
             </div>
 
             {data.imgproyect &&
-                <div className="qw:w-[40%] qw:h-full h-[40%] rounded-xl overflow-hidden border border-border-subtle">
+                <a className="qw:w-[40%] qw:h-full h-[40%] rounded-xl overflow-hidden border tracking-widest transition-all duration-300 hover:border-accent cursor-pointer" href={data.linklivedemo} target="_blank">
                     <img className="size-full object-cover" src={data.imgproyect} alt={data.title} />
-                </div>
+                </a>
             }
         </div>
     )

@@ -1,58 +1,77 @@
-import type { ReactNode, HTMLInputTypeAttribute, ButtonHTMLAttributes } from "react";
+import type { /*ReactNode,*/ HTMLInputTypeAttribute, ButtonHTMLAttributes, MouseEventHandler, SVGProps, ComponentType } from "react";
 
-export interface FormularyProps {
-  title: string;
-  fields: FieldConfig[];
-  className?: string;
-  classNamelabel?: string; 
-  classNameinput?: string;
-  children?: ReactNode; 
-};
+// --- 1. GLOBAL / SHARED TYPES ---
+export type Theme = 'Dark' | 'Light' | 'System';
 
-export interface FieldConfig {
-  id: number;
-  name: string;
-  label: string;
-  type: HTMLInputTypeAttribute;
-  placeholder: string;
-};
-
-export interface TecnologiesConfig {
-  name?: string;
-  icon: string;
-  bar?: boolean;
-  color?: string; 
-  cardSize?: string; 
-  imgSize?: string;
+export interface ThemeDataProps {
+  themes: Theme[];
 }
 
-export interface ProyectProps {
-    title: string; 
-    isrelevant?: boolean; 
-    txt: string;
-    linkgithub: string;
-    linklivedemo: string; 
-    tecnologies: TecnologiesConfig[];
-    imgproyect: string | null;
-};
-
-
+// --- 2. NAVIGATION & CONTACTS ---
 export interface NavProps {
-  id: number;
   link: string;
   txt: string;
 }
 
 export interface ContactsProps extends NavProps {
-  img: string;
+  img: string | ComponentType<SVGProps<SVGSVGElement>>; // Hereda id, link y txt de NavProps
 }
 
+// --- 3. TECHNOLOGIES (Skills) ---
+export interface TecnologiesConfig {
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  color?: string; 
+  name?: string;
+  bar?: boolean;
+  cardSize?: string; 
+  imgSize?: string;
+}
+
+export interface TecnologiesDataConfig {
+  [category: string]: TecnologiesConfig[];
+}
+
+// --- 4. PROJECTS ---
+export interface ProyectProps {
+  title: string; 
+  txt: string;
+  linkgithub: string;
+  linklivedemo: string; 
+  tecnologies: TecnologiesConfig[];
+  imgproyect: string | null;
+  isrelevant?: boolean; 
+}
+
+// --- 5. FORMULARY & INPUTS ---
+export interface FieldConfig {
+  name: string;
+  label: string;
+  type: HTMLInputTypeAttribute;
+  placeholder: string;
+}
+
+export interface FormDataConfig {
+    top: FieldConfig[];
+    bottom: FieldConfig;
+}
+
+export interface FormularyProps {
+  title: string;
+  fields: FormDataConfig;
+  className?: string;
+  classNamelabel?: string; 
+  classNameinput?: string;
+//  children?: ReactNode; 
+}
+
+// --- 6. INTERACTIVE ELEMENTS (Buttons) ---
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  handleclick?: MouseEventHandler<HTMLButtonElement>;
   link?: string;
   alt?: string;
   img?: string | null;
+  svg?: ComponentType<SVGProps<SVGSVGElement>> | string;
+  fillcolor?: string;
   txt?: string | null;
   className?: string;
-};
-
-export type Theme = 'dark' | 'light'; 
+}
