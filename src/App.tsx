@@ -6,12 +6,12 @@ import { NavData, FormData, /*ProyectCardDataUdemy,*/ ProyectCardDataSM, Contact
 import { LinkButton, Title1, Title3, Title4, Button, ProyectCard, NormalPrght, Formulary, TecnologiesCard, NavBar } from './index'
 
 function App() {
-  const { language } = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <div className='text-main min-h-screen font-display selection:bg-accent/30'>
       {/* Nav */}
-      <NavBar NavData={NavData} name={true} classname=' hidden ew:flex'/>
+      <NavBar NavData={NavData} name={true} classname=' hidden ew:flex' ChangueLanguage={() => toggleLanguage(language === 'Spanish' ? 'English' : 'Spanish')} language={language} />
       <nav className='z-20 qw:left-5 qw:right-5 left-2 right-2 max-w-241.5 p-5 mt-5 rounded-2xl mx-auto flex gap-6 items-center justify-between  ew:hidden'>
         <h1 className='font-bold tracking-tight'>Emmanuel.Dev</h1>
         <div className='flex fixed w-full justify-end mx-auto pr-10'>
@@ -28,7 +28,7 @@ function App() {
         ? <div className=' hidden'> </div>
         :
         <div className='flex justify-end px-5 fixed h-80 w-full z-20 -mt-2.5'>
-          <NavBar NavData={NavData} className='flex-col! items-end ' classname='sticky w-30 h-70 m-0! justify-end' classNameTheme='!w-25 mr-9' />
+          <NavBar NavData={NavData} className='flex-col! items-end ' classname='sticky w-30 h-70 m-0! justify-end' classNameTheme='!w-25 mr-9 ' ChangueLanguage={() => toggleLanguage(language === 'Spanish' ? 'English' : 'Spanish')} language={language} />
         </div>
 
       }

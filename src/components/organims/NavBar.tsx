@@ -1,13 +1,11 @@
 import { ThemeData, useTheme } from '../../hooks/useTheme';
-import { useLanguage } from '../../hooks/useLanguague';
 import { DayAndNightIcon, LanguageIcon } from '../../assets/Icons';
 import { useState } from 'react';
-import type { NavDataConfig } from '../../types/types';
+import type { NavDataConfig, Language } from '../../types/types';
 import { LinkButton, Button } from '../../index';
 
-export function NavBar({ NavData, className, classname, classNameTheme, name }: { className?: string, classname?: string, classNameTheme?: string, NavData: NavDataConfig, name?: boolean }) {
+export function NavBar({ NavData, className, classname, classNameTheme, name, ChangueLanguage, language }: { className?: string, classname?: string, classNameTheme?: string, NavData: NavDataConfig, name?: boolean, ChangueLanguage: () => void, language: Language }) {
     const { ToggleTheme } = useTheme();
-    const { language, toggleLanguage } = useLanguage();
     const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
         <nav className={`z-20 qw:left-5 qw:right-5 left-2 right-2 max-w-241.5 p-5 mt-5 rounded-2xl fixed mx-auto flex gap-6 items-center justify-between bg-page/80 backdrop-blur-xl border border-border-subtle shadow-2xl ${classname}`}>
@@ -20,7 +18,7 @@ export function NavBar({ NavData, className, classname, classNameTheme, name }: 
                     svg={LanguageIcon}
                     className='size-7 z-50 '
                     fillcolor='text-main'
-                    onClick={() => toggleLanguage(language === 'Spanish' ? 'English' : 'Spanish')}
+                    onClick={ChangueLanguage}
                 />
                 <Button
                     svg={DayAndNightIcon}
