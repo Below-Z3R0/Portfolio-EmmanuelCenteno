@@ -14,11 +14,13 @@
   --color-border-glow: var(--border-glow);
 
   --font-display: "Inter", sans-serif;
-
   --breakpoint-qw: 921px;
+  --breakpoint-ew: 700px;
+  --breakpoint-ww: 640px;
 
-/*  --transition-theme: 0.3s cubic-bezier(0.4, 0, 0.2, 1);*/
+  /*  --transition-theme: 0.3s cubic-bezier(0.4, 0, 0.2, 1);*/
 }
+
 /*@utility transition-ui {
   transition: 
     background-color var(--transition-theme),
@@ -31,44 +33,62 @@
 .Dark {
   --bg-Theme: #52525b;
   /* --- NEUTRAL BASE (Uniform) --- */
-  --bg-page: #09090b;   /* Zinc 950: standard */
-  --bg-card: #121214;   /* One step up, very subtle */
-  --bg-surface: #18181b; /* For floating elements */
+  --bg-page: #09090b;
+  /* Zinc 950: standard */
+  --bg-card: #121214;
+  /* One step up, very subtle */
+  --bg-surface: #18181b;
+  /* For floating elements */
 
   /* --- TEXT (Balanced) --- */
-  --text-main: #fafafa; /* Almost pure white for titles */
-  --text-body: #a1a1aa; /* Zinc gray for body text */
-  --text-muted: #52525b; /* For non-distracting elements */
+  --text-main: #fafafa;
+  /* Almost pure white for titles */
+  --text-body: #a1a1aa;
+  /* Zinc gray for body text */
+  --text-muted: #52525b;
+  /* For non-distracting elements */
 
   /* --- UNIQUE ACCENT (Consistent) --- */
-  --accent: #8b5cf6;    /* Elegant Violet */
+  --accent: #8b5cf6;
+  /* Elegant Violet */
   --accent-soft: rgba(139, 92, 246, 0.1);
 
   /* --- BORDERS (Pinterest Effect) --- */
-  --border-subtle: rgba(39, 39, 42, 0.6); /* Zinc 800 with transparency */
+  --border-subtle: rgba(39, 39, 42, 0.6);
+  /* Zinc 800 with transparency */
   --border-glow: rgba(139, 92, 246, 0.3);
-  --text-footer: #71717a; /* Softer gray for the footer */
+  --text-footer: #71717a;
+  /* Softer gray for the footer */
 }
 
 .Light {
   /* --- NEUTRAL BASE (Clean and modern) --- */
-  --bg-page: #ffffff;   /* Pure white for maximum clarity */
-  --bg-card: #f9fafb;   /* Very light gray for cards (Slate 50) */
-  --bg-surface: #f3f4f6; /* For floating elements or hovers */
+  --bg-page: #ffffff;
+  /* Pure white for maximum clarity */
+  --bg-card: #f9fafb;
+  /* Very light gray for cards (Slate 50) */
+  --bg-surface: #f3f4f6;
+  /* For floating elements or hovers */
 
   /* --- TEXT (High contrast but not aggressive) --- */
-  --text-main: #09090b; /* Zinc 950 for titles */
-  --text-body: #3f3f46; /* Zinc 700 for comfortable reading */
-  --text-muted: #71717a; /* Zinc 500 for secondary details */
+  --text-main: #09090b;
+  /* Zinc 950 for titles */
+  --text-body: #3f3f46;
+  /* Zinc 700 for comfortable reading */
+  --text-muted: #71717a;
+  /* Zinc 500 for secondary details */
 
   /* --- UNIQUE ACCENT (Brand consistent) --- */
-  --accent: #7c3aed;    /* Slightly more vibrant violet for white backgrounds */
+  --accent: #7c3aed;
+  /* Slightly more vibrant violet for white backgrounds */
   --accent-soft: rgba(124, 58, 237, 0.1);
 
   /* --- BORDERS (Subtle and defined) --- */
-  --border-subtle: rgba(228, 228, 231, 0.8); /* Zinc 200: noticeable but clean */
+  --border-subtle: rgba(228, 228, 231, 0.8);
+  /* Zinc 200: noticeable but clean */
   --border-glow: rgba(124, 58, 237, 0.2);
-  --text-footer: #a1a1aa; /* Soft gray for the footer */
+  --text-footer: #a1a1aa;
+  /* Soft gray for the footer */
 }
 
 #root {
@@ -80,8 +100,6 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding-left: calc(var(--spacing) * 5);  /* 1.25rem = 20px */
-  padding-right: calc(var(--spacing) * 5); /* 1.25rem = 20px */
 }
 
 :root {
@@ -116,8 +134,27 @@ a {
   text-decoration: none;
 }
 
-.section {
-  padding-block: calc(var(--spacing) * 15); /* 3.75rem = 60px */
+@layer base {
+  section {
+    padding-block: calc(var(--spacing) * 15);
+    padding-inline: calc(var(--spacing) * 5);
+  }
+
+  @media (width <=921px) {
+    section {
+      padding-inline: calc(var(--spacing) * 5)
+    }
+  }
+  @media (width <=640px) {
+    section {
+      padding-inline: calc(var(--spacing) * 3)
+    }
+  }
+  @media (width <=420px) {
+    section {
+      padding-inline: calc(var(--spacing) * 2)
+    }
+  }
 }
 
 input {

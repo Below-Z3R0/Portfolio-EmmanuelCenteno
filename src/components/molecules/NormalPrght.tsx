@@ -1,4 +1,4 @@
-export function NormalPrght({txt, className}: {txt: string, className?: string}) {
+export function NormalPrght({txt, className}: {txt: string | undefined, className?: string}) {
     return (
         < p className={`${className} text-left text-lg leading-relaxed`} >
             {txt}

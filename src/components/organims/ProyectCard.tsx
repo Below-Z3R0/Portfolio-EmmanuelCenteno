@@ -9,12 +9,12 @@ export function ProyectCard({ data }: ProyectCardBigProps) {
     return (
         <div className={`${data.imgproyect !== null
             //Cuando tiene imagen
-            ? ''
+            ? 'max-h-220'
             //Cuando no tiene imagen
-            : 'qw:max-w-[47.9%] max-h-100'} 
-            qw:h-80 w-full h-160 rounded-xl flex qw:flex-row flex-col-reverse justify-between p-5 bg-card border border-border-subtle shadow-lg transition-all hover:border-border-glow`}>
+            : 'qw:max-w-[47.9%] max-h-120'} 
+            qw:h-80 w-full h-auto rounded-xl flex qw:flex-row flex-col-reverse justify-between p-5 bg-card border border-border-subtle shadow-lg transition-all hover:border-border-glow`}>
 
-            <div className={`${data.imgproyect === null ? '' : 'qw:w-[50%] h-[58%] qw:h-full'} h-full w-full flex flex-col items-start gap-1`}>
+            <div className={`${data.imgproyect === null ? '' : 'qw:w-[50%] '} h-full w-full flex flex-col mt-3 qw:mt-0 items-start gap-1`}>
 
                 {data.isrelevant && (
                     <h6 className="w-50 h-6 rounded-2xl flex justify-center items-center bg-accent-soft text-accent text-[10px] font-bold uppercase tracking-wider border border-border-glow">
@@ -52,7 +52,7 @@ export function ProyectCard({ data }: ProyectCardBigProps) {
             </div>
 
             {data.imgproyect &&
-                <a className="qw:w-[40%] qw:h-full h-[40%] rounded-xl overflow-hidden border tracking-widest transition-all duration-300 hover:border-accent cursor-pointer" href={data.linklivedemo} target="_blank">
+                <a className="qw:w-[40%] qw:h-full h-auto rounded-xl overflow-hidden border tracking-widest transition-all duration-300 hover:border-accent cursor-pointer" href={data.linklivedemo} target="_blank">
                     <img className="size-full object-cover" src={data.imgproyect} alt={data.title} />
                 </a>
             }

@@ -1,5 +1,5 @@
 import type { TecnologiesDataConfig } from '../index';
-import { GitHubIcon, GitIcon, HTML5Icon, FigmaIcon, NodeIcon, PostGresSQLIcon, ReactIcon, SupaBaseIcon, TailwindIcon, TypeScriptIcon } from '../Assets/Icons';
+import { GitHubIcon, GitIcon, HTML5Icon, FigmaIcon, NodeIcon, PostGresSQLIcon, ReactIcon, SupaBaseIcon, TailwindIcon, TypeScriptIcon } from '../assets/Icons';
 export const TecnologiesData: TecnologiesDataConfig = {
     Frontend: [
         {

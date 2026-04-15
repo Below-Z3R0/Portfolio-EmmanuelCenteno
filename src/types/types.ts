@@ -2,6 +2,7 @@ import type { /*ReactNode,*/ HTMLInputTypeAttribute, ButtonHTMLAttributes, Mouse
 
 // --- 1. GLOBAL / SHARED TYPES ---
 export type Theme = 'Dark' | 'Light' | 'System';
+export type Language = 'English' | 'Spanish'
 
 export interface ThemeDataProps {
   themes: Theme[];
@@ -11,6 +12,11 @@ export interface ThemeDataProps {
 export interface NavProps {
   link: string;
   txt: string;
+}
+
+export interface NavDataConfig {
+    Spanish: NavProps[];
+    English: NavProps[];
 }
 
 export interface ContactsProps extends NavProps {
@@ -66,7 +72,7 @@ export interface FormularyProps {
 
 // --- 6. INTERACTIVE ELEMENTS (Buttons) ---
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  handleclick?: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   link?: string;
   alt?: string;
   img?: string | null;
