@@ -1,6 +1,6 @@
 import { ThemeData, useTheme } from '../../hooks/useTheme';
-import { useLanguage } from '../../hooks/useLanguague.tsx';
-import { DayAndNightIcon, LanguageIcon } from '../../assets/Icons.tsx';
+import { useLanguage } from '../../hooks/useLanguague';
+import { DayAndNightIcon, LanguageIcon } from '../../assets/Icons';
 import { useState } from 'react';
 import type { NavDataConfig } from '../../types/types';
 import { LinkButton, Button } from '../../index';

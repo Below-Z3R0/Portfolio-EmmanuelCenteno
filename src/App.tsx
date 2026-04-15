@@ -1,9 +1,9 @@
 import './App.css';
-import { useLanguage } from './hooks/useLanguague.tsx';
+import { useLanguage } from './hooks/useLanguague';
 import { useState } from 'react';
-import { MailIcon, LinkedInIcon, HamburNav } from './assets/Icons.tsx';
-import { NavData, FormData, /*ProyectCardDataUdemy,*/ ProyectCardDataSM, ContactsData, TecnologiesData, ProyectCardDataPorfolio, GeneralData } from './index.ts'
-import { LinkButton, Title1, Title3, Title4, Button, ProyectCard, NormalPrght, Formulary, TecnologiesCard, NavBar } from './index.ts'
+import { MailIcon, LinkedInIcon, HamburNav } from './assets/Icons';
+import { NavData, FormData, /*ProyectCardDataUdemy,*/ ProyectCardDataSM, ContactsData, TecnologiesData, ProyectCardDataPorfolio, GeneralData } from './index'
+import { LinkButton, Title1, Title3, Title4, Button, ProyectCard, NormalPrght, Formulary, TecnologiesCard, NavBar } from './index'
 
 function App() {
   const { language } = useLanguage();

@@ -1,4 +1,4 @@
-import type { TecnologiesConfig } from '../../index.ts'
+import type { TecnologiesConfig } from '../../index'
 
 export function TecnologiesCard({ name, icon: Icon,  color = "#3b82f6", cardSize, imgSize, bar }: TecnologiesConfig) {
   return (

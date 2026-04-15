@@ -1,27 +1,23 @@
 // --- 1. Types & Configurations ---
-export * from './types/types.ts';
-//export * from './types'
+export * from './types/types';
 
 // --- 2. Data & Constants ---
-export * from './data/ProyectCardData.ts';
-export * from './data/ContactsData.ts';
-export * from './data/TecnologiesData.ts';
-export * from './data/GeneralData.ts'
-//export * from './data'
+export * from './data/ProyectCardData';
+export * from './data/ContactsData';
+export * from './data/TecnologiesData';
+export * from './data/GeneralData';
 
 // --- 4. Molecules (Atomic Components) ---
-export * from './components/molecules/Button.tsx';
-export * from './components/molecules/LinkButton.tsx';
-export * from './components/molecules/NormalPrght.tsx';
-export * from './components/molecules/Title1.tsx';
-export * from './components/molecules/Title2.tsx';
-export * from './components/molecules/Title3.tsx';
-export * from './components/molecules/Title4.tsx';
-//export * from './components/molecules'
+export * from './components/molecules/Button';
+export * from './components/molecules/LinkButton';
+export * from './components/molecules/NormalPrght';
+export * from './components/molecules/Title1';
+export * from './components/molecules/Title2';
+export * from './components/molecules/Title3';
+export * from './components/molecules/Title4';
 
 // --- 5. Organisms (Complex Components) ---
-export * from './components/organims/Formulary.tsx';
-export * from './components/organims/ProyectCard.tsx';
-export * from './components/organims/TecnologiesCard.tsx';
-export * from './components/organims/NavBar.tsx'
-//export * from './components/organims'
+export * from './components/organims/Formulary';
+export * from './components/organims/ProyectCard';
+export * from './components/organims/TecnologiesCard';
+export * from './components/organims/NavBar';
