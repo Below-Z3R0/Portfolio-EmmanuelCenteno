@@ -17,7 +17,7 @@ function App() {
         <div className='flex fixed w-full justify-end mx-auto pr-10'>
           <Button
             svg={HamburNav}
-            className='size-7 z-50 '
+            className='size-7 z-20'
             fillcolor='text-main'
             onClick={() => setIsOpen(isOpen === false ? true : false)}
           />
@@ -28,7 +28,7 @@ function App() {
         ? <div className=' hidden'> </div>
         :
         <div className='flex justify-end px-5 fixed h-80 w-full z-20 -mt-2.5'>
-          <NavBar NavData={NavData} className='flex-col! items-end ' classname='sticky w-30 h-70 m-0! justify-end' classNameTheme='!w-25 mr-9 ' ChangueLanguage={() => toggleLanguage(language === 'Spanish' ? 'English' : 'Spanish')} language={language} />
+          <NavBar NavData={NavData} className='flex-col! items-end ' classname='sticky w-30 h-70 m-0! justify-end' classNameTheme='!w-25 mr-8 mt-62!' ChangueLanguage={() => toggleLanguage(language === 'Spanish' ? 'English' : 'Spanish')} language={language} />
         </div>
 
       }
@@ -107,8 +107,8 @@ function App() {
       </section>
 
       {/* Contact Form Uniforme */}
-      <section id='Contact' className='section flex flex-col gap-4 max-w-241.5 mx-auto py-20'>
-        <div className='rounded-3xl flex qw:flex-row flex-col qw:justify-between gap-10 max-ww:p-0 p-12 bg-card border border-border-subtle shadow-2xl relative overflow-hidden'>
+      <section id='Contact' className='section flex flex-col gap-4 max-w-241.5 mx-auto py-20 '>
+        <div className='rounded-3xl flex qw:flex-row flex-col qw:justify-between gap-10 max-ww:p-0 p-12 -z-10 bg-card border border-border-subtle shadow-2xl relative overflow-hidden'>
           <div className='absolute -top-24 -right-24 size-64 bg-accent/5 rounded-full blur-3xl'></div>
           <div className='qw:w-[50%] w-full flex flex-col max-ww:px-5 max-ww:pt-5 qw:justify-between justify-center qw:items-start items-center gap-4 relative z-10'>
             <div className='w-full flex flex-col items-start gap-4 pb-10'>
