@@ -12,12 +12,12 @@ function App() {
     <div className='text-main min-h-screen font-display selection:bg-accent/30'>
       {/* Nav */}
       <NavBar NavData={NavData} name={true} classname=' hidden ew:flex' ChangueLanguage={() => toggleLanguage(language === 'Spanish' ? 'English' : 'Spanish')} language={language} />
-      <nav className='z-20 qw:left-5 qw:right-5 left-2 right-2 max-w-241.5 p-5 mt-5 rounded-2xl mx-auto flex gap-6 items-center justify-between  ew:hidden'>
+      <nav className='z-1 qw:left-5 qw:right-5 left-2 right-2 max-w-241.5 p-5 mt-5 rounded-2xl mx-auto flex gap-6 items-center justify-between  ew:hidden'>
         <h1 className='font-bold tracking-tight'>Emmanuel.Dev</h1>
-        <div className='flex fixed w-full justify-end mx-auto pr-10'>
+        <div className='flex fixed w-full justify-end mx-auto pr-10 z-1'>
           <Button
             svg={HamburNav}
-            className='size-7 z-20'
+            className='size-7 '
             fillcolor='text-main'
             onClick={() => setIsOpen(isOpen === false ? true : false)}
           />
@@ -108,7 +108,7 @@ function App() {
 
       {/* Contact Form Uniforme */}
       <section id='Contact' className='section flex flex-col gap-4 max-w-241.5 mx-auto py-20 '>
-        <div className='rounded-3xl flex qw:flex-row flex-col qw:justify-between gap-10 max-ww:p-0 p-12 -z-10 bg-card border border-border-subtle shadow-2xl relative overflow-hidden'>
+        <div className='rounded-3xl flex qw:flex-row flex-col qw:justify-between gap-10 max-ww:p-0 p-12 bg-card border border-border-subtle shadow-2xl relative overflow-hidden'>
           <div className='absolute -top-24 -right-24 size-64 bg-accent/5 rounded-full blur-3xl'></div>
           <div className='qw:w-[50%] w-full flex flex-col max-ww:px-5 max-ww:pt-5 qw:justify-between justify-center qw:items-start items-center gap-4 relative z-10'>
             <div className='w-full flex flex-col items-start gap-4 pb-10'>
@@ -125,7 +125,7 @@ function App() {
           </div>
 
           {/* Formulario Desktop & Mobile */}
-          <div className='qw:w-[45%] w-full relative z-10 max-ww:px-2 max-ww:pb-2'>
+          <div className='qw:w-[45%] w-full relative max-ww:px-2 max-ww:pb-2'>
             <Formulary title={language === 'Spanish' ? 'Enviame un mensaje' : 'Send me a mail'} fields={FormData[language]} className='[&>label]:bg-transparent text-main' />
           </div>
         </div>
