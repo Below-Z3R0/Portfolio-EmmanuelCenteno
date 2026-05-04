@@ -9,9 +9,9 @@ export function Formulary({ title, fields, className, classNamelabel, classNamei
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
 
-        const SERVICE_ID = 'service_6glywta';
-        const TEMPLATE_ID = 'template_8vxufpe';
-        const PUBLIC_KEY = 'GgJWejzk_8eNitB69';
+        const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
         if (form.current) {
             emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
