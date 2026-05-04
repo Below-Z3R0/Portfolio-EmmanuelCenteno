@@ -1,8 +1,16 @@
 import { Button, LinkButton, Title2, Title4, Paragraph, TecnologiesCard } from "../componentsindex"
-import type { ProjectProps } from "../componentstypes"
 import { useState } from "react";
- 
-export function ProjectCard({ metadata, translations }: ProjectProps) {
+import type { ProjectTranslation } from "../componentstypes" 
+import { z } from 'zod';
+import { MetadataSchema } from '../../schema/projectschema/projects.schema';
+
+// Define una interfaz específica para este componente
+interface ProjectCardIndividualProps {
+  metadata: z.infer<typeof MetadataSchema>;
+  translations: ProjectTranslation;
+}
+
+export function ProjectCard({ metadata, translations }: ProjectCardIndividualProps) {
     const [activeTxt, setActivetxt] = useState(translations.txt)
     const handleReset = () => setActivetxt(translations.txt);
     const inConstruction = metadata.isInConstruction ? "opacity-65 cursor-not-allowed pointer-events-none" : ""
