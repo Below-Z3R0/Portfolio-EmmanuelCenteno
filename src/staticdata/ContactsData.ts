@@ -1,10 +1,10 @@
-import type { ContactsProps } from '../index'
+/* import type { ContactsProps } from '../types/types'
 import { LinkedInIcon, GitHubIcon } from '../assets/Icons'
 import type { FormDataConfig } from "../types/types"
 
 interface FormData {
-    Spanish: FormDataConfig;
-    English: FormDataConfig;
+    es: FormDataConfig;
+    en: FormDataConfig;
 }
 
 
@@ -15,7 +15,7 @@ export const ContactsData: ContactsProps[] = [
 ]
 
 export const FormData: FormData = {
-    Spanish: {
+    es: {
         top: [
             { name: "name", label: "Nombre completo", type: "text", placeholder: "Ingresa tu nombre" },
             { name: "user_email", label: "Direccion de correo", type: "email", placeholder: "Ingresa tu correo" },
@@ -23,7 +23,7 @@ export const FormData: FormData = {
         ],
         bottom: { name: "message", label: "Tu mensaje", type: "text", placeholder: "Escribe tu mensaje aquí" },
     },
-    English: {
+    en: {
         top: [
             { name: "name", label: "Full Name", type: "text", placeholder: "Enter your name" },
             { name: "user_email", label: "Email Address", type: "email", placeholder: "Enter your email" },
@@ -32,3 +32,5 @@ export const FormData: FormData = {
         bottom: { name: "message", label: "Your Message", type: "text", placeholder: "Write your message here" },
     }
 };
+
+*/

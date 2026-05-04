@@ -1,5 +1,5 @@
-import { Button, Title4 } from "../../index"
-import type { FormularyProps } from "../../types/types"
+import { Button, Title4 } from "../componentsindex"
+import type { FormularyProps } from "../componentstypes"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 

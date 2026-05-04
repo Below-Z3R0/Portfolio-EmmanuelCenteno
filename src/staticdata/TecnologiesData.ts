@@ -1,6 +1,6 @@
-import type { TecnologiesDataConfig } from '../index';
+/*import type { SkillsDataConfig } from '../types/types';
 import { GitHubIcon, GitIcon, HTML5Icon, FigmaIcon, NodeIcon, PostGresSQLIcon, ReactIcon, SupaBaseIcon, TailwindIcon, TypeScriptIcon } from '../assets/Icons';
-export const TecnologiesData: TecnologiesDataConfig = {
+export const SkillsData: SkillsDataConfig = {
     Frontend: [
         {
             name: 'React',
@@ -60,4 +60,4 @@ export const TecnologiesData: TecnologiesDataConfig = {
         //            color: '#2496ED',
         //        },
     ],
-};
+};*/

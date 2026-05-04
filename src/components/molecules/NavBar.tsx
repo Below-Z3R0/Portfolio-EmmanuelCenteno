@@ -1,14 +1,14 @@
 import { ThemeData, useTheme } from '../../hooks/useTheme';
 import { DayAndNightIcon, LanguageIcon } from '../../assets/Icons';
 import { useState } from 'react';
-import type { NavDataConfig, Language } from '../../types/types';
-import { LinkButton, Button } from '../../index';
+import type { NavDataConfig, Language } from '../componentstypes';
+import { LinkButton, Button } from '../componentsindex';
 
 export function NavBar({ NavData, className, classname, classNameTheme, name, ChangueLanguage, language }: { className?: string, classname?: string, classNameTheme?: string, NavData: NavDataConfig, name?: boolean, ChangueLanguage: () => void, language: Language }) {
     const { ToggleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
-        <nav className={`z-20 qw:left-5 qw:right-5 left-2 right-2 max-w-241.5 p-5 mt-5 rounded-2xl fixed mx-auto flex gap-6 items-center justify-between bg-page/80 backdrop-blur-xl border border-border-subtle shadow-2xl ${classname}`}>
+        <nav className={`z-20 qw:left-5 qw:right-5 left-2 right-2 max-w-241.5 p-5 mt-1 rounded-2xl fixed mx-auto flex gap-6 items-center justify-between bg-page/80 backdrop-blur-xl border border-border-subtle shadow-2xl ${classname}`}>
             {name && <h1 className='font-bold tracking-tight'>Emmanuel.Dev</h1>}
             <div className={`flex gap-4 items-center ${className}`}>
                 {NavData[language].map((item, index) => (

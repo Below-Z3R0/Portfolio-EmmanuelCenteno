@@ -1,0 +1,6 @@
+export * from './sectionschema/aboutme.schema'
+export * from './sectionschema/contact.schema'
+export * from './sectionschema/hero.schema'
+export * from './sectionschema/projects.schema'
+export * from './sectionschema/skills.schema'
+export * from './projectschema/projects.schema'

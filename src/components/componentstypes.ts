@@ -1,7 +1,9 @@
-import type { /*ReactNode,*/ HTMLInputTypeAttribute, SVGProps, ComponentType } from "react";
+import type { /*ReactNode,*/ HTMLInputTypeAttribute, ButtonHTMLAttributes, MouseEventHandler, SVGProps, ComponentType } from "react";
+import { z } from 'zod';
+import { LanguageSchema, MetadataSchema } from '../schema/projectschema/projects.schema';
 
 // --- 1. GLOBAL / SHARED TYPES ---
-export type Theme = 'dark' | 'light' | 'system';
+export type Theme = 'sark' | 'light' | 'system';
 export type Language = 'en' | 'es'
 
 export interface ThemeDataProps {
@@ -39,15 +41,9 @@ export interface SkillsDataConfig {
 }
 
 // --- 4. PROJECTS ---
-export interface ProyectProps {
-  title: string; 
-  txt: string;
-  linkgithub: string;
-  linklivedemo: string; 
-  tecnologies: TecnologiesConfig[];
-  imgproyect: string | null;
-  isrelevant?: boolean | null; 
-  isInConstruction?: boolean | null;
+export interface ProjectProps {
+  metadata: z.infer<typeof MetadataSchema>;
+  translations: z.infer<typeof LanguageSchema>;
 }
 
 // --- 5. FORMULARY & INPUTS ---
@@ -70,4 +66,18 @@ export interface FormularyProps {
   classNamelabel?: string; 
   classNameinput?: string;
 //  children?: ReactNode; 
+}
+
+// --- 6. INTERACTIVE ELEMENTS (Buttons) ---
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  link?: string;
+  alt?: string;
+  img?: string | undefined; 
+  svg?: ComponentType<SVGProps<SVGSVGElement>> | string;
+  fillcolor?: string;
+  txt?: string | null;
+  className?: string;
+  classNameImg?: string;
+  children?: React.ReactNode;
 }

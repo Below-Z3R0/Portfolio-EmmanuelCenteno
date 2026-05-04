@@ -1,8 +1,8 @@
-import type { TecnologiesConfig } from '../../index'
+import type { TecnologiesConfig } from '../componentstypes'
 
 export function TecnologiesCard({ name, icon: Icon,  color = "#3b82f6", cardSize, imgSize, bar }: TecnologiesConfig) {
   return (
-    <div className={`${cardSize} w-32 group relative flex flex-col items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl transition-all duration-300 hover:bg-slate-800/80 hover:-translate-y-2 shadow-xl`}
+    <div className={`w-32 group relative flex flex-col items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl transition-all duration-300 hover:bg-slate-800/80 hover:-translate-y-2 shadow-xl ${cardSize}`}
       style={{ '--hover-color': color } as React.CSSProperties}
     >
       <div

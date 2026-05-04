@@ -1,15 +1,15 @@
-import type { ProyectProps } from "../types/types"
+/*import type { ProyectProps } from "../types/types"
 import { ReactIcon, NodeIcon, TypeScriptIcon } from "../assets/Icons"
 interface ProyectData {
-    Spanish: ProyectProps;
-    English: ProyectProps;
+    es: ProyectProps;
+    en: ProyectProps;
 }
 
-/*
+
 export const ProyectCardDataUdemy: ProyectData = {
-    Spanish: {
+    es: {
         title: 'Plataforma tipo udemy',
-        isrelevant: true,
+        isInConstruction: true,
         txt: 'Creada con React, Supabase, Next.js, Tailwind CSS y Node.JS',
         linkgithub: 'https://www.linkedin.com/in/emmanuel-centeno-3bbab53b1/',
         linklivedemo: 'https://www.linkedin.com/in/emmanuel-centeno-3bbab53b1/',
@@ -32,9 +32,9 @@ export const ProyectCardDataUdemy: ProyectData = {
             },
         ],
     },
-    English: {
+    en: {
         title: 'Plataforma tipo udemy',
-        isrelevant: true,
+        isInConstruction: true,
         txt: 'Creada con React, Supabase, Next.js, Tailwind CSS y Node.JS',
         linkgithub: 'https://www.linkedin.com/in/emmanuel-centeno-3bbab53b1/',
         linklivedemo: 'https://www.linkedin.com/in/emmanuel-centeno-3bbab53b1/',
@@ -58,11 +58,11 @@ export const ProyectCardDataUdemy: ProyectData = {
         ],
     },
 };
-*/
+
 
 export const ProyectCardDataPorfolio: ProyectData = {
-    Spanish: {
-        title: 'Port Folio',
+    es: {
+        title: 'Portfolio',
         isrelevant: true,
         txt: 'Plataforma web de alto rendimiento diseñada con una arquitectura modular y minimalista. Enfocada en la experiencia de usuario (UX) y la optimización técnica, sirviendo como pieza central de mi ecosistema como desarrollador Full Stack.',
         linkgithub: 'https://github.com/Below-Z3R0/Portfolio-EmmanuelCenteno',
@@ -72,21 +72,24 @@ export const ProyectCardDataPorfolio: ProyectData = {
             {
                 name: 'React',
                 icon: ReactIcon,
-                color: '#61DAFB'
+                color: '#61DAFB',
+                description: "blablabla"
             },
             {
                 name: 'Node.js',
                 icon: NodeIcon,
-                color: '#339933'
+                color: '#339933',
+                description: "blablabla"
             },
             {
                 name: 'TypeScript',
                 icon: TypeScriptIcon,
-                color: '#3178C6'
+                color: '#3178C6',
+                description: "blablabla"
             }
         ]
     },
-    English: {
+    en: {
         title: 'Port Folio',
         isrelevant: true,
         txt: 'Plataforma web de alto rendimiento diseñada con una arquitectura modular y minimalista. Enfocada en la experiencia de usuario (UX) y la optimización técnica, sirviendo como pieza central de mi ecosistema como desarrollador Full Stack.',
@@ -97,24 +100,28 @@ export const ProyectCardDataPorfolio: ProyectData = {
             {
                 name: 'React',
                 icon: ReactIcon,
-                color: '#61DAFB'
+                color: '#61DAFB',
+                description: "blablabla"
             },
             {
                 name: 'Node.js',
                 icon: NodeIcon,
-                color: '#339933'
+                color: '#339933',
+                description: "blablabla",
             },
             {
                 name: 'TypeScript',
                 icon: TypeScriptIcon,
-                color: '#3178C6'
+                color: '#3178C6',
+                description: "blablabla",
             }
         ]
     },
 }
 
 export const ProyectCardDataSM: ProyectData = {
-    Spanish: {
+    es: {
+        isInConstruction: true,
         title: 'Port Folio',
         txt: 'Plataforma web de alto rendimiento diseñada con una arquitectura modular y minimalista. Enfocada en la experiencia de usuario (UX) y la optimización técnica, sirviendo como pieza central de mi ecosistema como desarrollador Full Stack.',
         linkgithub: 'https://github.com/Below-Z3R0/Portfolio-EmmanuelCenteno',
@@ -124,21 +131,24 @@ export const ProyectCardDataSM: ProyectData = {
             {
                 name: 'React',
                 icon: ReactIcon,
-                color: '#61DAFB'
+                color: '#61DAFB',
+                description: "blablabla",
             },
             {
                 name: 'Node.js',
                 icon: NodeIcon,
-                color: '#339933'
+                color: '#339933',
+                description: "blablabla",
             },
             {
                 name: 'TypeScript',
                 icon: TypeScriptIcon,
-                color: '#3178C6'
+                color: '#3178C6',
+                description: "blablabla",
             }
         ]
     },
-    English: {
+    en: {
         title: 'Port Folio',
         txt: 'Plataforma web de alto rendimiento diseñada con una arquitectura modular y minimalista. Enfocada en la experiencia de usuario (UX) y la optimización técnica, sirviendo como pieza central de mi ecosistema como desarrollador Full Stack.',
         linkgithub: 'https://github.com/Below-Z3R0/Portfolio-EmmanuelCenteno',
@@ -148,18 +158,22 @@ export const ProyectCardDataSM: ProyectData = {
             {
                 name: 'React',
                 icon: ReactIcon,
-                color: '#61DAFB'
+                color: '#61DAFB',
+                description: "blablabla",
             },
             {
                 name: 'Node.js',
                 icon: NodeIcon,
-                color: '#339933'
+                color: '#339933',
+                description: "blablabla",
             },
             {
                 name: 'TypeScript',
                 icon: TypeScriptIcon,
-                color: '#3178C6'
+                color: '#3178C6',
+                description: "blablabla",
             }
         ]
     },
 }
+*/
