@@ -1,6 +1,6 @@
 import type { /*ReactNode,*/ HTMLInputTypeAttribute, ButtonHTMLAttributes, MouseEventHandler, SVGProps, ComponentType } from "react";
 import { z } from 'zod';
-import { LanguageSchema, MetadataSchema } from '../schema/projectschema/projects.schema';
+import { MetadataSchema } from '../schema/projectschema/projects.schema';
 
 // --- 1. GLOBAL / SHARED TYPES ---
 export type Theme = 'sark' | 'light' | 'system';
@@ -40,10 +40,25 @@ export interface SkillsDataConfig {
   [category: string]: TecnologiesConfig[];
 }
 
-// --- 4. PROJECTS ---
+
+// Define la estructura de UNA sola traducción
+export interface ProjectTranslation {
+  txt: string;
+  tecnologies: {
+    icon: any; 
+    name: string;
+    color: string;
+    description: string;
+  }[];
+}
+
+// Ahora define ProjectProps indicando que 'translations' tiene ambos idiomas
 export interface ProjectProps {
   metadata: z.infer<typeof MetadataSchema>;
-  translations: z.infer<typeof LanguageSchema>;
+  translations: {
+    en: ProjectTranslation;
+    es: ProjectTranslation;
+  };
 }
 
 // --- 5. FORMULARY & INPUTS ---

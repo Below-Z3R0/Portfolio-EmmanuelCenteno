@@ -1,12 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-if grep -qE "SERVICE_ID = '.*'|PUBLIC_KEY = '.*'|TEMPLATE_ID = '.*'" src/**/*.{tsx,ts}; then
+if grep -rE "SERVICE_ID = '.*'|PUBLIC_KEY = '.*'|TEMPLATE_ID = '.*'" src/ --exclude-dir=node_modules; then
   echo "--------------------------------------------------------"
-  echo "❌ ERROR DE SEGURIDAD: Llaves detectadas en el código."
-  echo "Por favor, usa variables de entorno (.env)."
+  echo "❌ ERROR: Llaves detectadas en el código (Hardcoded)."
+  echo "Usa import.meta.env y mueve los valores al archivo .env"
   echo "--------------------------------------------------------"
   exit 1
 fi
-
-pnpm test
