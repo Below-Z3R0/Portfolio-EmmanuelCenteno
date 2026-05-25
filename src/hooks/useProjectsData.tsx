@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getProjectsData } from "../api/projectdata.service";
+import { getProjectsData } from "../api/projectsdata.service";
 import type { Projects } from "../schema/projectschema/projects.schema";
 
 export const useProjectsData = () => {

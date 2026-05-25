@@ -34,7 +34,7 @@ export function ProjectsSection({ translations, projects, language }: ProjectsSe
       <div className='w-full flex flex-wrap qw:flex-row gap-8 flex-col'>
         {projects.map((project, index) => (
           <ProjectCard 
-            key={index} 
+            key={`${index}-${language}`} 
             metadata={project.metadata} 
             translations={project.translations[language]} 
           />

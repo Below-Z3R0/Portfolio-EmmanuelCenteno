@@ -30,7 +30,7 @@ export function NavBar({ NavData, className, classname, classNameTheme, name, Ch
                 {isOpen === false
                     ? <div className=' hidden'> </div>
                     :
-                    <div className={`-z-10 mt-32 ml-66 mx-auto fixed  w-40 rounded-md p-2 gap-2 flex flex-col items-end bg-page/80 backdrop-blur-xl border border-border-subtle shadow-2xl ${classNameTheme}`}>
+                    <div className={`-z-10 mt-32 ml-66 mx-auto fixed  w-40 rounded-md p-2 gap-2 flex flex-col items-end bg-page/98 backdrop-blur-xl border border-border-subtle shadow-2xl ${classNameTheme}`}>
                         {ThemeData.map((cat, index) => (
                             <Button onClick={() => ToggleTheme(cat)} key={index} txt={cat} className='flex items-start h-8 w-full p-1 rounded-md' />
                         ))}

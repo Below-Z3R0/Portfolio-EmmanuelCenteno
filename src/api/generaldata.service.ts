@@ -1,16 +1,14 @@
-import { getAboutMeData } from "./sections/aboutme.service";
-import { getContactData } from "./sections/contact.service";
-import { getHeroData } from "./sections/hero.service";
-import { getProjectsData } from "./sections/projects.service";
-import { getSkillsData } from "./sections/skills.service";
+import { AboutMeSectionSchema, ContactSectionSchema, HeroSectionSchema, ProjectsSectionSchema, SkillsSectionSchema } from "../schema/schemasindex";
+import { getContentData } from "./sections/content.service";
+
 
 export const getGeneralData = async () => {
     const [herosection, skillssection, projectssection, aboutmesection, contactsection] = await Promise.all([
-        getHeroData(),
-        getSkillsData(),
-        getProjectsData(),
-        getAboutMeData(),
-        getContactData()
+        getContentData("Hero", HeroSectionSchema),
+        getContentData("Skills", SkillsSectionSchema),
+        getContentData("Proyects", ProjectsSectionSchema),
+        getContentData("AboutMe", AboutMeSectionSchema),
+        getContentData("Contact", ContactSectionSchema),
     ])
     return { herosection, skillssection, projectssection, aboutmesection, contactsection };
 };

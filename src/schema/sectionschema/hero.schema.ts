@@ -8,6 +8,7 @@ const MetaDataSchema = z.object({
 
 const LanguageSchema2 = z.object({
     contact: z.string(),
+    linkedin: z.string(),
     Title: z.string(),
     Paragraph1: z.string(),
     Paragraph2: z.string(),

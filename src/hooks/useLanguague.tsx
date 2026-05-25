@@ -20,7 +20,6 @@ export function useLanguage() {
 
     const toggleLanguage = (newLanguage: AvailableLanguages) => {
         setLanguage(newLanguage);
-        console.log(language)
     };
 
     return { toggleLanguage, language };

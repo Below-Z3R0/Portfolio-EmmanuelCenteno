@@ -8,6 +8,7 @@ interface HeroSectionProps {
     Paragraph1: string;
     Paragraph2: string;
     contact: string;
+    linkedin: string;
   };
   metadata: {
     mail: string | ComponentType<SVGProps<SVGSVGElement>>;
@@ -18,7 +19,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ translations, metadata, imageSrc = 'ImgCV.jpg' }: HeroSectionProps) {
   return (
-    <section id="Home" className='py-50 max-w-241.5 mx-auto px-5'>
+    <section id="Home" className='qw:py-50 max-w-241.5 mx-auto px-5'>
       <div className='gap-4 flex flex-col justify-start items-start h-full'>
         
         {/* Header: Foto y Status */}
@@ -60,7 +61,7 @@ export function HeroSection({ translations, metadata, imageSrc = 'ImgCV.jpg' }: 
           />
           <LinkButton 
             link='https://www.linkedin.com/in/emmanuel-centeno-3bbab53b1/' 
-            txt={translations.contact} 
+            txt={translations.linkedin} 
             svg={metadata.linkedin} 
             fillcolor='h-6' 
             className='w-auto px-6 h-11 rounded-xl flex flex-row-reverse items-center justify-center gap-2 bg-card border border-border-subtle text-main hover:bg-surface transition-colors' 

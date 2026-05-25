@@ -1,4 +1,3 @@
-'use client'; // Solo si estás usando el App Router de Next.js
 import { motion } from 'framer-motion';
 import { useLanguage } from './hooks/useLanguague';
 import { useState } from 'react';
@@ -15,11 +14,14 @@ const fadeUp = {
   viewport: { once: true, margin: "-15% 0px" }, 
   transition: { 
     type: "spring", 
-    stiffness: 50,  
-    damping: 20,    
-    duration: 1 
+    stiffness: 100,  
+    damping: 12,    
+    duration: 0.005 
   }
 } as const;
+
+export const revalidate = 3600;
+
 function App() {
   const { language, toggleLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState<boolean>(false);
