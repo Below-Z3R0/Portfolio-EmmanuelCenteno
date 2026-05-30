@@ -1,4 +1,4 @@
-import { ReactIcon, DockerIcon, NodeIcon, SupaBaseIcon, TypeScriptIcon, HamburNavIcon, LanguageIcon, LinkedInIcon, MailIcon, DayAndNightIcon, TailwindIcon, PostGresSQLIcon, FigmaIcon, HTML5Icon, GitHubIcon, GitIcon } from './Icons'
+import { ReactIcon, DockerIcon, NodeIcon, SupaBaseIcon, TypeScriptIcon, HamburNavIcon, LanguageIcon, LinkedInIcon, MailIcon, DayAndNightIcon, TailwindIcon, PostGresSQLIcon, FigmaIcon, HTML5Icon, GitHubIcon, GitIcon, NextIcon } from './Icons'
 
 export const ICON_MAP: Record<string, React.ComponentType<any>> = {
   react: ReactIcon,
@@ -16,5 +16,6 @@ export const ICON_MAP: Record<string, React.ComponentType<any>> = {
   html5: HTML5Icon,
   github: GitHubIcon,
   docker: DockerIcon,
+  next: NextIcon,
   git: GitIcon
 };
