@@ -45,7 +45,7 @@ export function AboutMeSection({ translations, imageSrc = 'ImgCV.jpg' }: AboutMe
 
       <img 
         src={imageSrc} 
-        className='lg:block qw:w-full w-0 max-w-60 object-cover rounded-2xl shadow-lg' 
+        className='lg:block lg:w-full w-0 max-w-60 object-cover rounded-2xl shadow-lg' 
         alt="Profile Desktop"
       />
     </section>
