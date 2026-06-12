@@ -1,0 +1,14 @@
+{
+  "en": {
+    "titlelg": "Crafting Full Stack experiences",
+    "titlesm": "About me",
+    "Paragraph1": "Hi! I'm Emmanuel, a Full Stack developer specialized in the JavaScript ecosystem (React, Next.js, Node.js). I focus on building applications that don't just work — they scale gracefully and feel intuitive to use.",
+    "Paragraph2": "I love the challenge of connecting a robust backend with a captivating design. Currently, while developing my own Udemy clone (NINCY), I keep refining my CSS and animation skills. When I'm not coding, you'll find me digital drawing — a practice that keeps my creativity sharp for solving technical problems in innovative ways."
+  },
+  "es": {
+    "titlelg": "Diseñador de experiencias Full Stack",
+    "titlesm": "Sobre mí",
+    "Paragraph1": "¡Hola! Soy Emmanuel, desarrollador Full Stack especializado en el ecosistema de JavaScript (React, Next.js, Node.js). Me enfoco en construir aplicaciones que no solo funcionen, sino que escalen con elegancia y se sientan intuitivas de usar.",
+    "Paragraph2": "Me encanta el reto de conectar un backend robusto con un diseño que cautive. Actualmente, mientras desarrollo mi propio clon de Udemy (NINCY), sigo perfeccionando mis habilidades en CSS y animaciones. Cuando no estoy programando, me encontrarás dibujando digitalmente — una práctica que mantiene mi creatividad afilada para resolver problemas técnicos de forma innovadora."
+  }
+}

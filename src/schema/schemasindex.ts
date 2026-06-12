@@ -1,5 +1,6 @@
 export * from './sectionschema/aboutme.schema'
 export * from './sectionschema/contact.schema'
+export * from './sectionschema/footer.schema'
 export * from './sectionschema/hero.schema'
 export * from './sectionschema/projects.schema'
 export * from './sectionschema/skills.schema'

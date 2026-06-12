@@ -1,0 +1,46 @@
+{
+  "en": [
+    {
+      "txt": "Home",
+      "link": "#Home"
+    },
+    {
+      "txt": "Tecnologies",
+      "link": "#Tecnologies"
+    },
+    {
+      "txt": "Projects",
+      "link": "#Proyects"
+    },
+    {
+      "txt": "About me",
+      "link": "#AboutMe"
+    },
+    {
+      "txt": "Contact",
+      "link": "#Contact"
+    }
+  ],
+  "es": [
+    {
+      "txt": "Home",
+      "link": "#Home"
+    },
+    {
+      "txt": "Tecnologías",
+      "link": "#Tecnologies"
+    },
+    {
+      "txt": "Proyectos",
+      "link": "#Proyects"
+    },
+    {
+      "txt": "Sobre mí",
+      "link": "#AboutMe"
+    },
+    {
+      "txt": "Contacto",
+      "link": "#Contact"
+    }
+  ]
+}

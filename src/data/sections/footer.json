@@ -1,0 +1,22 @@
+{
+  "en": {
+    "builtWith": "Built with React and Tailwind",
+    "copyright": "Coded by Emmanuel Centeno",
+    "navLinks": {
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "es": {
+    "builtWith": "Hecho con React y Tailwind",
+    "copyright": "Desarrollado por Emmanuel Centeno",
+    "navLinks": {
+      "about": "Sobre mí",
+      "skills": "Skills",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  }
+}

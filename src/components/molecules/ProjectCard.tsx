@@ -1,6 +1,6 @@
 import { Button, LinkButton, Title2, Title4, Paragraph, TecnologiesCard } from "../componentsindex"
 import { useState } from "react";
-import type { ProjectTranslation } from "../componentstypes" 
+import type { ProjectTranslation } from "../componentstypes"
 import { z } from 'zod';
 import { MetadataSchema } from '../../schema/projectschema/projects.schema';
 
@@ -15,7 +15,7 @@ export function ProjectCard({ metadata, translations }: ProjectCardIndividualPro
     const handleReset = () => setActivetxt(translations.txt);
     const inConstruction = metadata.isInConstruction ? "opacity-65 cursor-not-allowed pointer-events-none" : ""
     return (
-        <div className={`${metadata.imgproject !== undefined ? 'max-h-220' : 'qw:max-w-[47.9%] max-h-120'} qw:h-100 w-full h-auto rounded-xl flex qw:flex-row flex-col-reverse justify-between p-5 bg-card border border-border-subtle shadow-lg transition-all ${metadata.isInConstruction ? "hover:border-border-glow-warning" : "hover:border-border-glow"} `}>
+        <article className={`${metadata.imgproject !== undefined ? 'max-h-220' : 'qw:max-w-[47.9%] max-h-120'} qw:h-100 w-full h-auto rounded-xl flex qw:flex-row flex-col-reverse justify-between p-5 bg-card border border-border-subtle shadow-lg transition-all ${metadata.isInConstruction ? "hover:border-border-glow-warning" : "hover:border-border-glow"} `}>
 
             <div className={`${metadata.imgproject === undefined ? '' : 'qw:w-[50%] '} h-full w-full flex flex-col mt-3 qw:mt-0 items-start gap-1`}>
 
@@ -36,20 +36,35 @@ export function ProjectCard({ metadata, translations }: ProjectCardIndividualPro
                 <Paragraph className="h-full text-dim" txt={activeTxt} />
 
                 <div className="flex flex-col gap-2 w-full">
-                    <div className="flex justify-start gap-2">
-                        <LinkButton className={`flex items-center w-20 h-8 text-dim hover:text-main transition-colors ${inConstruction}`} txt="GitHub" link={metadata.linkgithub} />
-                        <LinkButton className={`flex items-center w-20 h-8 text-dim hover:text-main transition-colors ${inConstruction}`} txt="Live Demo" link={metadata.linklivedemo} />
+                    {/* Links GitHub / Live Demo — ahora con underline + iconos */}
+                    <div className="flex justify-start gap-3">
+                        <LinkButton
+                            className={`flex items-center gap-1.5 text-sm text-dim hover:text-accent underline underline-offset-4 decoration-border-subtle hover:decoration-accent transition-colors ${inConstruction}`}
+                            txt="GitHub"
+                            link={metadata.linkgithub}
+                            svg={undefined}
+                        />
+                        <span className="text-border-subtle">·</span>
+                        <LinkButton
+                            className={`flex items-center gap-1.5 text-sm text-dim hover:text-accent underline underline-offset-4 decoration-border-subtle hover:decoration-accent transition-colors ${inConstruction}`}
+                            txt="Live Demo"
+                            link={metadata.linklivedemo}
+                            svg={undefined}
+                        />
                     </div>
 
-                    <div className="w-full flex justify-between items-center" >
-                        <div className="flex qw:gap-2 gap-4">
+                    <div className="w-full flex justify-between items-center gap-3" >
+                        {/* Tech icons más grandes (size-10) con label visible */}
+                        <div className="flex qw:gap-3 gap-4 items-center">
                             {translations.tecnologies.map((item, index) => (
                                 <Button
-                                    className={`size-fit cursor-pointer ${inConstruction}`} onClick={() => setActivetxt(activeTxt === translations.txt ? item.description || translations.txt : translations.txt)}
+                                    className={`size-10 cursor-pointer ${inConstruction} group relative`}
+                                    onClick={() => setActivetxt(activeTxt === translations.txt ? item.description || translations.txt : translations.txt)}
                                     key={index}
+                                    aria-label={item.name}
                                 >
                                     <TecnologiesCard
-                                        cardSize="!rounded-none !bg-transparent !border-none !backdrop-blur-none !shadow-transparent !p-0 !hover:bg-transparent !h-6 !w-6 cursor-pointer"
+                                        cardSize="!rounded-none !bg-transparent !border-none !backdrop-blur-none !shadow-transparent !p-0 !hover:bg-transparent !h-10 !w-10 cursor-pointer"
                                         imgSize="!size-full !object-cover opacity-80 hover:opacity-100 transition-opacity"
                                         icon={item.icon}
                                         color={item.color}
@@ -57,9 +72,10 @@ export function ProjectCard({ metadata, translations }: ProjectCardIndividualPro
                                 </Button>
                             ))}
                         </div>
+                        {/* Return button — más claro, siempre visible */}
                         <Button
-                            className={`cursor-pointer qw:h-8 qw:w-20 h-10 w-24 rounded-full bg-surface border border-border-subtle text-dim text-[10px] font-bold uppercase tracking-widest transition-all duration-300 hover:border-accent hover:text-main hover:shadow-[0_0_15px_rgba(139,92,246,0.2)] ${inConstruction}`}
-                            txt="Return"
+                            className={`cursor-pointer h-9 px-4 rounded-full bg-surface border border-border-subtle text-dim text-[11px] font-bold uppercase tracking-widest transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-[0_0_15px_rgba(139,92,246,0.2)] ${inConstruction}`}
+                            txt="↺ Reset"
                             onClick={handleReset}
                         />
                     </div>
@@ -74,9 +90,6 @@ export function ProjectCard({ metadata, translations }: ProjectCardIndividualPro
                     classNameImg="object-cover"
                 />
             }
-        </div>
+        </article>
     )
 }
-
-//Todo
-//Aplicar un grid para un dise;o mas responsive 

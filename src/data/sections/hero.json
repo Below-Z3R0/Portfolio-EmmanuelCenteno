@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "mail": "mail",
+    "linkedin": "linkedin"
+  },
+  "translations": {
+    "en": {
+      "Title": "Hi! I'm Emmanuel Centeno",
+      "contact": "Contact",
+      "linkedin": "LinkedIn",
+      "Paragraph1": "Passionate about Full Stack development and UI design. I specialize in the JavaScript ecosystem, working with React, Next.js, and Node.js.",
+      "Paragraph2": "My focus is on creating clean architectures using PostgreSQL and Supabase, always looking to learn new technologies to solve complex problems creatively.",
+      "workstatus": "Available for work"
+    },
+    "es": {
+      "Title": "Hola! Soy Emmanuel Centeno",
+      "contact": "Contacto",
+      "linkedin": "LinkedIn",
+      "Paragraph1": "Apasionado por el desarrollo Full Stack y el diseño UI. Me especializo en el ecosistema de JavaScript, trabajando con React, Next.js y Node.js.",
+      "Paragraph2": "Mi enfoque está en la creación de arquitecturas limpias utilizando PostgreSQL y Supabase, siempre buscando aprender nuevas tecnologías para resolver problemas complejos de forma creativa.",
+      "workstatus": "Disponible para trabajar"
+    }
+  }
+}

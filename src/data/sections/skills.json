@@ -1,0 +1,75 @@
+{
+  "en": {
+    "titlelg": "My Tech Stack",
+    "titlesm": "Skills",
+    "Paragraph": "I specialize in the JavaScript ecosystem, but my focus is always on choosing the right tool to create high-performance products and clean code."
+  },
+  "es": {
+    "titlelg": "Mi Stack Tecnológico",
+    "titlesm": "Skills",
+    "Paragraph": "Me especializo en el ecosistema de JavaScript, pero mi enfoque siempre es elegir la herramienta adecuada para crear productos de alto rendimiento y código limpio"
+  },
+  "skills": {
+    "DevOps": [
+      {
+        "icon": "github",
+        "name": "GitHub",
+        "color": "#FFFFFF"
+      },
+      {
+        "icon": "git",
+        "name": "Git",
+        "color": "#F05032"
+      },
+      {
+        "icon": "docker",
+        "name": "Docker",
+        "color": "#2496ED"
+      }
+    ],
+    "Backend": [
+      {
+        "icon": "node",
+        "name": "Node.js",
+        "color": "#339933"
+      },
+      {
+        "icon": "postgressql",
+        "name": "PostgresSQL",
+        "color": "#4169E1"
+      },
+      {
+        "icon": "supabase",
+        "name": "Supabase",
+        "color": "#3ECF8E"
+      }
+    ],
+    "Frontend": [
+      {
+        "icon": "react",
+        "name": "React",
+        "color": "#61DAFB"
+      },
+      {
+        "icon": "next",
+        "name": "Next JS",
+        "color": "#FFFFFF"
+      },
+      {
+        "icon": "typescript",
+        "name": "TypeScript",
+        "color": "#3178C6"
+      },
+      {
+        "icon": "tailwind",
+        "name": "Tailwind CSS",
+        "color": "#06B6D4"
+      },
+      {
+        "icon": "html5",
+        "name": "HTML5",
+        "color": "#E34F26"
+      }
+    ]
+  }
+}

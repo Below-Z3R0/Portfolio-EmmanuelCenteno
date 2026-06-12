@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "title": "Portfolio",
+    "imgproject": "portfolio",
+    "isrelevant": true,
+    "linkgithub": "https://github.com/Below-Z3R0/Portfolio-EmmanuelCenteno",
+    "linklivedemo": "https://portfolio-emmanuel-centeno-t2a7.vercel.app/"
+  },
+  "translations": {
+    "en": {
+      "txt": "High-performance web platform designed with a modular and minimalist architecture. Focused on user experience (UX) and technical optimization, serving as the centerpiece of my Full Stack developer ecosystem.",
+      "tecnologies": [
+        {
+          "icon": "react",
+          "name": "React",
+          "color": "#61DAFB",
+          "description": "Development of a reactive interface using Hooks and a reusable component structure to optimize performance."
+        },
+        {
+          "icon": "node",
+          "name": "Node.js",
+          "color": "#339933",
+          "description": "Implementation of server logic and dependency management to ensure ecosystem scalability."
+        },
+        {
+          "icon": "typescript",
+          "name": "TypeScript",
+          "color": "#3178C6",
+          "description": "Use of strict typing to reduce runtime errors and improve long-term code maintainability."
+        }
+      ]
+    },
+    "es": {
+      "txt": "Plataforma web de alto rendimiento diseñada con una arquitectura modular y minimalista. Enfocada en la experiencia de usuario (UX) y la optimización técnica, sirviendo como pieza central de mi ecosistema como desarrollador Full Stack.",
+      "tecnologies": [
+        {
+          "icon": "react",
+          "name": "react",
+          "color": "#61DAFB",
+          "description": "Desarrollo de una interfaz reactiva utilizando Hooks y una estructura de componentes reutilizables para optimizar el rendimiento."
+        },
+        {
+          "icon": "node",
+          "name": "Node.js",
+          "color": "#339933",
+          "description": "Implementación de lógica de servidor y gestión de dependencias para asegurar la escalabilidad del ecosistema."
+        },
+        {
+          "icon": "typescript",
+          "name": "TypeScript",
+          "color": "#3178C6",
+          "description": "Uso de tipado estricto para reducir errores en tiempo de ejecución y mejorar la mantenibilidad del código a largo plazo."
+        }
+      ]
+    }
+  }
+}

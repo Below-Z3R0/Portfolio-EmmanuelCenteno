@@ -1,0 +1,84 @@
+{
+  "en": {
+    "titlelg": "Let's talk",
+    "titlesm": "Contact",
+    "Paragraph": "I am looking to collaborate on projects where I can provide value in web and backend development, with total flexibility to adapt to new technologies."
+  },
+  "es": {
+    "titlelg": "Hablemos",
+    "titlesm": "Contacto",
+    "Paragraph": "Busco colaborar en proyectos donde pueda aportar valor en desarrollo web y backend, con total flexibilidad para adaptarme a nuevas tecnologías."
+  },
+  "Form": {
+    "en": {
+      "top": [
+        {
+          "name": "name",
+          "type": "text",
+          "label": "Full Name",
+          "placeholder": "Enter your name"
+        },
+        {
+          "name": "user_email",
+          "type": "email",
+          "label": "Email Address",
+          "placeholder": "Enter your email"
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Subject",
+          "placeholder": "Subject"
+        }
+      ],
+      "title": "Send me a mail",
+      "bottom": {
+        "name": "message",
+        "type": "text",
+        "label": "Your Message",
+        "placeholder": "Write your message here"
+      }
+    },
+    "es": {
+      "top": [
+        {
+          "name": "name",
+          "type": "text",
+          "label": "Nombre completo",
+          "placeholder": "Ingresa tu nombre"
+        },
+        {
+          "name": "user_email",
+          "type": "email",
+          "label": "Direccion de correo",
+          "placeholder": "Ingresa tu correo"
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Asunto",
+          "placeholder": "Asunto"
+        }
+      ],
+      "title": "Enviame un Correo",
+      "bottom": {
+        "name": "message",
+        "type": "text",
+        "label": "Tu mensaje",
+        "placeholder": "Escribe tu mensaje aquí"
+      }
+    }
+  },
+  "Contacts": [
+    {
+      "img": "linkedin",
+      "txt": "LinkedIn",
+      "link": "https://www.linkedin.com/in/emmanuel-centeno-3bbab53b1/"
+    },
+    {
+      "img": "github",
+      "txt": "GitHub",
+      "link": "https://github.com/Below-Z3R0"
+    }
+  ]
+}

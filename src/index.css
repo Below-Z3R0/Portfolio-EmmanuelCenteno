@@ -22,8 +22,9 @@
   --breakpoint-ww: 640px;
 }
 
-/* Themes */
-/* Themes */
+/* ===========================================
+   Themes
+   =========================================== */
 .dark {
   --bg-Theme: #52525b;
   --bg-page: #09090b;
@@ -43,27 +44,34 @@
   --border-subtle: rgba(39, 39, 42, 0.6);
   --border-glow: rgba(139, 92, 246, 0.3);
   --text-footer: #71717a;
+
+  /* Glows para el BackgroundFX */
+  --glow-accent: rgba(139, 92, 246, 0.18);
+  --glow-warning: rgba(245, 158, 11, 0.1);
 }
 
 .light {
-  --bg-page: #ffffff;
-  --bg-card: #f9fafb;
-  --bg-surface: #f3f4f6;
+  --bg-page: #fafaf9;
+  --bg-card: #ffffff;
+  --bg-surface: #f4f4f5;
 
   --text-main: #09090b;
   --text-body: #3f3f46;
   --text-muted: #71717a;
 
   --accent: #7c3aed;
-  --accent-soft: rgba(124, 58, 237, 0.1);
+  --accent-soft: rgba(124, 58, 237, 0.08);
 
   --warning: #d97706;
-  /* Un poco más oscuro para contraste en blanco */
-  --warning-soft: rgba(217, 119, 6, 0.1);
+  --warning-soft: rgba(217, 119, 6, 0.08);
 
   --border-subtle: rgba(228, 228, 231, 0.8);
-  --border-glow: rgba(124, 58, 237, 0.2);
+  --border-glow: rgba(124, 58, 237, 0.18);
   --text-footer: #a1a1aa;
+
+  /* Glows para el BackgroundFX */
+  --glow-accent: rgba(124, 58, 237, 0.08);
+  --glow-warning: rgba(217, 119, 6, 0.05);
 }
 
 #root {
@@ -97,8 +105,6 @@
   }
 }
 
-
-
 body {
   margin: 0;
 }
@@ -109,6 +115,51 @@ html {
 
 a {
   text-decoration: none;
+}
+
+/* ===========================================
+   Accessibility — focus, skip-link, semantic
+   =========================================== */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: var(--bg-page);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0 0 8px 8px;
+  transition: top 200ms ease-in-out;
+  text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @layer base {

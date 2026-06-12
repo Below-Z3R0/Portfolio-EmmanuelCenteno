@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "title": "NINCy",
+    "imgproject": "nincy",
+    "linkgithub": "https://github.com/Below-Z3R0",
+    "linklivedemo": "https://www.linkedin.com/in/emmanuel-centeno-3bbab53b1/",
+    "isInConstruction": true
+  },
+  "translations": {
+    "en": {
+      "txt": "Udemy-inspired educational platform designed for online course management with a focus on high performance and scalability.",
+      "tecnologies": [
+        {
+          "icon": "react",
+          "name": "React",
+          "color": "#61DAFB",
+          "description": "Development of a reactive interface for lesson viewing and student progress tracking."
+        },
+        {
+          "icon": "node",
+          "name": "Node.js",
+          "color": "#339933",
+          "description": "Implementation of a robust API for enrollment management and multimedia content."
+        },
+        {
+          "icon": "typescript",
+          "name": "TypeScript",
+          "color": "#3178C6",
+          "description": "Strict typing to securely handle complex structures for courses and user profiles."
+        }
+      ]
+    },
+    "es": {
+      "txt": "Plataforma educativa inspirada en Udemy, diseñada para la gestión de cursos online con un enfoque en alto rendimiento y escalabilidad.",
+      "tecnologies": [
+        {
+          "icon": "react",
+          "name": "React",
+          "color": "#61DAFB",
+          "description": "Desarrollo de una interfaz reactiva para la visualización de lecciones y progreso del estudiante."
+        },
+        {
+          "icon": "node",
+          "name": "Node.js",
+          "color": "#339933",
+          "description": "Implementación de una API robusta para la gestión de inscripciones y contenido multimedia."
+        },
+        {
+          "icon": "typescript",
+          "name": "TypeScript",
+          "color": "#3178C6",
+          "description": "Uso de tipado estricto para manejar estructuras complejas de cursos y perfiles de usuario de forma segura."
+        }
+      ]
+    }
+  }
+}
