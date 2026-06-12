@@ -20,7 +20,7 @@ export function ProjectsSection({ translations, projects, language }: ProjectsSe
         <MiniTitleAnimation>
           <Title4
             txt={translations.titlesm}
-            className='text-accent tracking-[0.2em] uppercase text-xs font-semibold'
+            className='uppercase text-accent tracking-[0.2em] text-[16px] font-normal'
           />
         </MiniTitleAnimation>
         <Title3

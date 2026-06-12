@@ -23,7 +23,7 @@ export function TecnologiesSection({ translations, skills }: TecnologiesSectionP
       {/* Cabecera de la sección */}
       <div className='flex items-start flex-col gap-4'>
         <MiniTitleAnimation>
-          <Title4 txt={translations.titlesm} className='uppercase text-accent tracking-[0.2em] text-xs font-semibold' />
+          <Title4 txt={translations.titlesm} className='uppercase text-accent tracking-[0.2em] text-[16px] font-normal' />
         </MiniTitleAnimation>
         <Title3 txt={translations.titlelg} className='text-main' />
         <Paragraph className='text-dim max-w-2xl' txt={translations.Paragraph} />

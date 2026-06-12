@@ -140,13 +140,6 @@ export function StaggerItem({ children, className = '' }: AnimationProps) {
 export function MiniTitleAnimation({ children, className = '' }: AnimationProps) {
   return (
     <div className={`flex items-center gap-3 mb-4 ${className}`}>
-      <motion.span
-        initial={{ width: 0 }}
-        whileInView={{ width: 28 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: easeOut }}
-        className="h-px bg-accent"
-      />
       <motion.div
         initial={{ opacity: 0, x: -8 }}
         whileInView={{ opacity: 1, x: 0 }}

@@ -18,7 +18,7 @@ export function AboutMeSection({ translations, imageSrc = 'ImgCV.jpg' }: AboutMe
         {/* Títulos */}
         <MiniTitleAnimation>
           <Title4
-            className='uppercase text-accent tracking-[0.2em] text-xs font-semibold'
+            className='uppercase text-accent tracking-[0.2em] text-[16px] font-normal'
             txt={translations.titlesm}
           />
         </MiniTitleAnimation>

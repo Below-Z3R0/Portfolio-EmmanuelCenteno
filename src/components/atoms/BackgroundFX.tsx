@@ -22,7 +22,7 @@ export function BackgroundFX() {
 
       {/* Glow 1: Púrpura — esquina superior izquierda */}
       <div
-        className="absolute -top-40 -left-40 size-[40rem] rounded-full blur-3xl opacity-70 dark:opacity-50 mix-blend-multiply dark:mix-blend-normal"
+        className="absolute -top-40 -left-40 size-160 rounded-full blur-3xl opacity-70 dark:opacity-50 mix-blend-multiply dark:mix-blend-normal"
         style={{
           background:
             'radial-gradient(circle, var(--glow-accent) 0%, transparent 70%)',
@@ -31,7 +31,7 @@ export function BackgroundFX() {
 
       {/* Glow 2: Azul — esquina inferior derecha (variedad cromática) */}
       <div
-        className="absolute -bottom-40 -right-40 size-[36rem] rounded-full blur-3xl opacity-70 dark:opacity-50 mix-blend-multiply dark:mix-blend-normal"
+        className="absolute -bottom-40 -right-40 size-144 rounded-full blur-3xl opacity-70 dark:opacity-50 mix-blend-multiply dark:mix-blend-normal"
         style={{
           background:
             'radial-gradient(circle, var(--glow-blue) 0%, transparent 70%)',
@@ -40,7 +40,7 @@ export function BackgroundFX() {
 
       {/* Glow 3: Púrpura/Warning — centro derecha */}
       <div
-        className="absolute top-1/3 -right-60 size-[30rem] rounded-full blur-3xl opacity-60 dark:opacity-40 mix-blend-multiply dark:mix-blend-normal"
+        className="absolute top-1/3 -right-60 size-120 rounded-full blur-3xl opacity-60 dark:opacity-40 mix-blend-multiply dark:mix-blend-normal"
         style={{
           background:
             'radial-gradient(circle, var(--glow-accent) 0%, transparent 70%)',
@@ -49,7 +49,7 @@ export function BackgroundFX() {
 
       {/* Glow 4: Warning sutil — centro izquierda */}
       <div
-        className="absolute top-2/3 -left-60 size-[28rem] rounded-full blur-3xl opacity-60 dark:opacity-30 mix-blend-multiply dark:mix-blend-normal"
+        className="absolute top-2/3 -left-60 size-112 rounded-full blur-3xl opacity-60 dark:opacity-30 mix-blend-multiply dark:mix-blend-normal"
         style={{
           background:
             'radial-gradient(circle, var(--glow-warning) 0%, transparent 70%)',
