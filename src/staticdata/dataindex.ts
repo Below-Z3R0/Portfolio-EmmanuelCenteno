@@ -1,4 +1,4 @@
-import type { NavDataConfig } from '../types/types'
+import type { NavDataConfig } from '../components/types'
 
 export const NavData: NavDataConfig = {
     es: [

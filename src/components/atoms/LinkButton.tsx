@@ -1,4 +1,4 @@
-import type { ButtonProps } from "../componentstypes";
+import type { ButtonProps } from "../types";
 
 export function LinkButton({ link, img, svg: Svg, fillcolor, alt, txt, className, classNameImg }: ButtonProps,) {
   return (

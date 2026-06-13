@@ -1,10 +1,10 @@
 import { ThemeData, useTheme } from '../../hooks/useTheme';
 import { DayAndNightIcon, LanguageIcon } from '../../assets/Icons';
 import { useState } from 'react';
-import type { NavDataConfig, Language } from '../componentstypes';
-import { LinkButton, Button } from '../componentsindex';
+import type { NavBarProps } from '../types';
+import { LinkButton, Button } from '../components';
 
-export function NavBar({ NavData, className, classname, classNameTheme, name, ChangueLanguage, language }: { className?: string, classname?: string, classNameTheme?: string, NavData: NavDataConfig, name?: boolean, ChangueLanguage: () => void, language: Language }) {
+export function NavBar({ NavData, className, classname, classNameTheme, name, ChangueLanguage, language }: NavBarProps) {
     const { ToggleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
@@ -27,9 +27,7 @@ export function NavBar({ NavData, className, classname, classNameTheme, name, Ch
                     onClick={() => setIsOpen(isOpen === false ? true : false)}
                 />
 
-                {isOpen === false
-                    ? <div className=' hidden'> </div>
-                    :
+                {isOpen &&
                     <div className={`-z-10 mt-32 ml-66 mx-auto fixed  w-40 rounded-md p-2 gap-2 flex flex-col items-end bg-page/98 backdrop-blur-xl border border-border-subtle shadow-2xl ${classNameTheme}`}>
                         {ThemeData.map((cat, index) => (
                             <Button onClick={() => ToggleTheme(cat)} key={index} txt={cat} className='flex items-start h-8 w-full p-1 rounded-md' />

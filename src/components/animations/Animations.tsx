@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
-import type { ReactNode } from 'react';
+import type { AnimationProps, SlideProps, PopProps } from '../types';
 
 // ===========================================
 // Easing curves & motion presets
@@ -8,23 +8,6 @@ import type { ReactNode } from 'react';
 export const ease = [0.25, 0.1, 0.25, 1] as const;
 export const easeOut = [0.16, 1, 0.3, 1] as const;
 export const spring = { type: 'spring' as const, stiffness: 80, damping: 20 };
-
-// ===========================================
-// Animation props
-// ===========================================
-interface AnimationProps {
-  children: ReactNode;
-  delay?: number;
-  className?: string;
-}
-
-interface SlideProps extends AnimationProps {
-  x?: number;
-}
-
-interface PopProps extends AnimationProps {
-  scale?: number;
-}
 
 // ===========================================
 // 1. FadeUp — entrada estándar de secciones y cards

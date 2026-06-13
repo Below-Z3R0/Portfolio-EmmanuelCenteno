@@ -1,15 +1,6 @@
-import { Title3, Title4, Paragraph } from '../componentsindex';
+import { Title3, Title4, Paragraph } from '../components';
 import { MiniTitleAnimation, SlideInLeft, SlideInRight } from '../animations/animationsindex';
-
-interface AboutMeSectionProps {
-  translations: {
-    titlesm: string;
-    titlelg: string;
-    Paragraph1: string;
-    Paragraph2: string;
-  };
-  imageSrc?: string;
-}
+import type { AboutMeSectionProps } from '../types';
 
 export function AboutMeSection({ translations, imageSrc = 'ImgCV.jpg' }: AboutMeSectionProps) {
   return (

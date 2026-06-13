@@ -1,13 +1,9 @@
 import { AlertCircle, RefreshCcw, Home } from "lucide-react";
+import type { ErrorStateProps } from '../types';
 
-interface ErrorStateProps {
-  message?: string;
-  onRetry?: () => void;
-}
-
-export function ErrorPage ({ 
-  message = "Hubo un error al cargar los datos del portafolio.", 
-  onRetry 
+export function ErrorPage ({
+  message = "Hubo un error al cargar los datos del portafolio.",
+  onRetry
 }: ErrorStateProps) {
   return (
     <div className="min-h-[60vh] w-full flex items-center justify-center p-6">

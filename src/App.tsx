@@ -12,7 +12,7 @@ import {
   AboutMeSection,
   ProjectsSection,
   BackgroundFX,
-} from './components/componentsindex';
+} from './components/components';
 import { FadeUp } from './components/animations/animationsindex';
 import { useGeneralData } from './hooks/useGeneralData';
 import { useProjectsData } from './hooks/useProjectsData';

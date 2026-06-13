@@ -1,10 +1,8 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Button, Title4, SuccessMessage, ErrorMessage } from '../componentsindex';
+import { Button, Title4, SuccessMessage, ErrorMessage } from '../components';
 import { LoadingDots } from '../animations/animationsindex';
-import type { FormularyProps } from '../componentstypes';
-
-type FormStatus = 'idle' | 'loading' | 'success' | 'error';
+import type { FormularyProps, FormStatus } from '../types';
 
 export function Formulary({ title, fields, className, classNamelabel, classNameinput }: FormularyProps) {
     const form = useRef<HTMLFormElement>(null);

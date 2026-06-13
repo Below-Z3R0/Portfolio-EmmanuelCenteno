@@ -1,16 +1,6 @@
-import { Title3, Title4, Paragraph, ProjectCard } from '../componentsindex';
+import { Title3, Title4, Paragraph, ProjectCard } from '../components';
 import { FadeUp, MiniTitleAnimation } from '../animations/animationsindex';
-import type { ProjectProps } from '../componentstypes';
-
-interface ProjectsSectionProps {
-  translations: {
-    titlesm: string;
-    titlelg: string;
-    Paragraph: string;
-  };
-  projects: ProjectProps[];
-  language: 'es' | 'en';
-}
+import type { ProjectsSectionProps } from '../types';
 
 export function ProjectsSection({ translations, projects, language }: ProjectsSectionProps) {
   return (

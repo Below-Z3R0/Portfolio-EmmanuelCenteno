@@ -1,4 +1,4 @@
-import type { ButtonProps } from "../componentstypes";
+import type { ButtonProps } from "../types";
 export function Button({ img, txt, svg: Svg, fillcolor, className, alt, type = 'button', onClick, children }: ButtonProps) {
   return (
     <button className={className} type={type} onClick={onClick}>

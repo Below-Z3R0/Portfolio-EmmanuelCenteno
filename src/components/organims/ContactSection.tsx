@@ -1,19 +1,5 @@
-import { Title3, Title4, Paragraph, LinkButton, Formulary } from '../componentsindex';
-import type { ContactsProps } from '../componentstypes';
-
-interface ContactSectionProps {
-  translations: {
-    titlesm: string;
-    titlelg: string;
-    Paragraph: string;
-  };
-  contacts: ContactsProps[];
-  formTranslations: {
-    title: string;
-    top: any[];
-    bottom: any;
-  };
-}
+import { Title3, Title4, Paragraph, LinkButton, Formulary } from '../components';
+import type { ContactSectionProps } from '../types';
 
 export function ContactSection({ translations, contacts, formTranslations }: ContactSectionProps) {
   return (

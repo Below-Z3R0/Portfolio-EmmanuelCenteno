@@ -1,4 +1,4 @@
-import type { Theme } from "./hookstypes";
+import type { Theme } from '../components/types';
 import { useEffect, useState } from "react";
 
 export const ThemeData: Theme[] = ['light', 'dark'];

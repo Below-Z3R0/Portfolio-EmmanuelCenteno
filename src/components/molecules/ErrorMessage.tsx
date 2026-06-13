@@ -1,13 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '../componentsindex';
-
-interface ErrorMessageProps {
-  show: boolean;
-  onClose: () => void;
-  onRetry?: () => void;
-  title?: string;
-  message?: string;
-}
+import { Button } from '../components';
+import type { ErrorMessageProps } from '../types';
 
 /**
  * ErrorMessage — Modal de error con X animado

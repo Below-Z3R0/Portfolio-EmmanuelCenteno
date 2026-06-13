@@ -1,14 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { Button } from '../componentsindex';
-
-interface SuccessMessageProps {
-  show: boolean;
-  onClose: () => void;
-  title?: string;
-  message?: string;
-  autoCloseMs?: number;
-}
+import { Button } from '../components';
+import type { SuccessMessageProps } from '../types';
 
 /**
  * SuccessMessage — Modal/toast con checkmark animado

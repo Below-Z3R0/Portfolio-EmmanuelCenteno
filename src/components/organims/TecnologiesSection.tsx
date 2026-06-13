@@ -1,19 +1,6 @@
-import { Title3, Title4, Paragraph, TecnologiesCard } from '../componentsindex';
+import { Title3, Title4, Paragraph, TecnologiesCard } from '../components';
 import { MiniTitleAnimation, StaggerContainer, StaggerItem } from '../animations/animationsindex';
-import type { TecnologiesConfig } from '../componentstypes';
-
-interface TecnologiesSectionProps {
-  translations: {
-    titlesm: string;
-    titlelg: string;
-    Paragraph: string;
-  };
-  skills: {
-    Frontend: TecnologiesConfig[];
-    Backend: TecnologiesConfig[];
-    DevOps: TecnologiesConfig[];
-  };
-}
+import type { TecnologiesSectionProps } from '../types';
 
 export function TecnologiesSection({ translations, skills }: TecnologiesSectionProps) {
   const categories = ["Frontend", "Backend", "DevOps"] as const;

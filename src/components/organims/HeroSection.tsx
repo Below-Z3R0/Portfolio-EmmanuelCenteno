@@ -1,22 +1,6 @@
-import { Title1, Paragraph, LinkButton } from '../componentsindex';
+import { Title1, Paragraph, LinkButton } from '../components';
 import { PopIn, Pulse, StaggerContainer, StaggerItem } from '../animations/animationsindex';
-import type { ComponentType, SVGProps } from 'react';
-
-interface HeroSectionProps {
-  translations: {
-    workstatus: string;
-    Title: string;
-    Paragraph1: string;
-    Paragraph2: string;
-    contact: string;
-    linkedin: string;
-  };
-  metadata: {
-    mail: string | ComponentType<SVGProps<SVGSVGElement>>;
-    linkedin: string | ComponentType<SVGProps<SVGSVGElement>>;
-  };
-  imageSrc?: string;
-}
+import type { HeroSectionProps } from '../types';
 
 export function HeroSection({ translations, metadata, imageSrc = 'ImgCV.jpg' }: HeroSectionProps) {
   return (

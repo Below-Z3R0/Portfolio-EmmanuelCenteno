@@ -1,5 +1,6 @@
 export const IMG_MAP: Record<string, string> = {
     portfolio: 'Portfolio.png',
     nincy: 'Udemy.png',
-    default: 'placeholder.png'
+    default: 'placeholder.png',
+    centenoadvisory: 'centenoadvisory.png'
 };
