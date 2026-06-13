@@ -76,7 +76,7 @@ export function ProjectCard({ metadata, translations }: ProjectCardProps) {
 
             {metadata.imgproject &&
                 <LinkButton
-                    className={`qw:w-[47.9%] qw:h-full h-auto rounded-xl overflow-hidden border tracking-widest transition-all duration-300 hover:border-accent cursor-pointer${inConstruction}`}
+                    className={`qw:w-[47.9%] qw:h-full h-auto object- rounded-xl overflow-hidden border tracking-widest transition-all duration-300 hover:border-accent cursor-pointer${inConstruction}`}
                     link={metadata.linklivedemo}
                     img={metadata.imgproject}
                     classNameImg="object-cover"
