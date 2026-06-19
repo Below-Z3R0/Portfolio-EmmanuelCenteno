@@ -214,3 +214,55 @@ input {
   --tw-outline-style: none;
   outline-style: none;
 }
+
+/* Animación de fade-in para cambios de texto en ProjectCard */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadein {
+  animation: fadein 0.25s ease-out;
+}
+
+/* ===========================================
+   Animación de entrada para ProjectCard (CSS puro)
+   - Dispara cuando el card entra al viewport (vía useInView)
+   - State inicial: opacity:0 + translateY → anima a visible
+   - Combinable con delays por índice (stagger)
+   =========================================== */
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.92);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+/* Estado base: la card está oculta ANTES de que se aplique la animación */
+.animate-card-enter {
+  opacity: 0;
+  transform: translateY(60px) scale(0.92);
+}
+.animate-card-enter.is-visible {
+  animation: card-enter 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-card-enter-delay-1.is-visible { animation-delay: 0.1s; }
+.animate-card-enter-delay-2.is-visible { animation-delay: 0.2s; }
+.animate-card-enter-delay-3.is-visible { animation-delay: 0.3s; }
+.animate-card-enter-delay-4.is-visible { animation-delay: 0.4s; }
+.animate-card-enter-delay-5.is-visible { animation-delay: 0.5s; }
+
+/* Respeta usuarios con reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-card-enter,
+  .animate-fadein {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+  }
+}

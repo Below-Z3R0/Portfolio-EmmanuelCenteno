@@ -1,7 +1,7 @@
 import { useLanguage } from './hooks/useLanguague';
 import { useState } from 'react';
 import { HamburNavIcon } from './assets/Icons';
-import { NavData } from './staticdata/dataindex';
+import { NavData, ProjectBadgeLabels } from './staticdata/dataindex';
 import {
   Button,
   NavBar,
@@ -88,6 +88,7 @@ function App() {
             translations={GeneralData.projectssection[language]}
             projects={ProjectsData}
             language={language}
+            labels={ProjectBadgeLabels[language]}
           />
         </FadeUp>
 

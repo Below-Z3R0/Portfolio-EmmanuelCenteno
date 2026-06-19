@@ -1,25 +1,30 @@
 import { Button, LinkButton, Title2, Title4, Paragraph, TecnologiesCard } from "../components"
 import { useState } from "react";
+import { useInView } from "../../hooks/useInView";
 import type { ProjectCardProps } from "../types"
 
-export function ProjectCard({ metadata, translations }: ProjectCardProps) {
+export function ProjectCard({ metadata, translations, labels, index }: ProjectCardProps) {
     const [activeTxt, setActivetxt] = useState(translations.txt)
+    const [ref, inView] = useInView<HTMLElement>(0.15, true);
     const handleReset = () => setActivetxt(translations.txt);
     const inConstruction = metadata.isInConstruction ? "opacity-65 cursor-not-allowed pointer-events-none" : ""
+    const delayClass = typeof index === 'number' ? `animate-card-enter-delay-${Math.min(index + 1, 5)}` : ''
     return (
-        <article className={`${metadata.imgproject !== undefined ? 'max-h-220' : 'qw:max-w-[47.9%] max-h-120'} qw:h-100 w-full h-auto rounded-xl flex qw:flex-row flex-col-reverse justify-between p-5 bg-card border border-border-subtle shadow-lg transition-all ${metadata.isInConstruction ? "hover:border-border-glow-warning" : "hover:border-border-glow"} `}>
+        <article
+            ref={ref}
+            className={`${metadata.imgproject !== undefined ? 'max-h-220' : 'qw:max-w-[47.9%] max-h-120'} qw:h-100 w-full h-auto rounded-xl flex qw:flex-row flex-col-reverse justify-between p-5 bg-card border border-border-subtle shadow-lg transition-all ${metadata.isInConstruction ? "hover:border-border-glow-warning" : "hover:border-border-glow"} animate-card-enter ${delayClass} ${inView ? 'is-visible' : ''}`}>
 
             <div className={`${metadata.imgproject === undefined ? '' : 'qw:w-[50%] '} h-full w-full flex flex-col mt-3 qw:mt-0 items-start gap-1`}>
 
                 {metadata.isrelevant && (
                     <Title4 className="w-40 h-10 rounded-xl flex justify-center items-center bg-accent-soft text-accent text-[10px] font-bold uppercase tracking-wider border border-border-glow"
-                        txt="⭐ Proyecto destacado"
+                        txt={labels.featured}
                     />
                 )}
 
                 {metadata.isInConstruction && (
                     <Title4 className="w-40 h-10 rounded-xl flex justify-center items-center bg-warning-soft text-warning text-[10px] font-bold uppercase tracking-wider border border-border-glow-warning"
-                        txt="🚧 En Construcion"
+                        txt={labels.inConstruction}
                     />
                 )}
 

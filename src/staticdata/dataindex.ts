@@ -16,3 +16,16 @@ export const NavData: NavDataConfig = {
         { link: "#Contact", txt: "Contact" },
     ],
 };
+
+// Labels locales para los badges de ProjectCard.
+// NO vienen de Supabase — son UI-only y estáticos.
+export const ProjectBadgeLabels = {
+    es: {
+        featured: '⭐ Proyecto destacado',
+        inConstruction: '🚧 En construcción',
+    },
+    en: {
+        featured: '⭐ Featured project',
+        inConstruction: '🚧 Under construction',
+    },
+} as const;

@@ -132,6 +132,11 @@ export interface ErrorMessageProps {
 export interface ProjectCardProps {
   metadata: z.infer<typeof MetadataSchema>;
   translations: ProjectTranslation;
+  labels: {
+    featured: string;
+    inConstruction: string;
+  };
+  index?: number;
 }
 
 // ============================================================
@@ -174,6 +179,10 @@ export interface ProjectsSectionProps {
   };
   projects: ProjectProps[];
   language: Language;
+  labels: {
+    featured: string;
+    inConstruction: string;
+  };
 }
 
 export interface AboutMeSectionProps {
