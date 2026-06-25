@@ -12,7 +12,7 @@ export function ProjectCard({ metadata, translations, labels, index }: ProjectCa
     return (
         <article
             ref={ref}
-            className={`${metadata.imgproject !== undefined ? 'max-h-220' : 'qw:max-w-[47.9%] max-h-120'} qw:h-100 w-full h-auto rounded-xl flex qw:flex-row flex-col-reverse justify-between p-5 bg-card border border-border-subtle shadow-lg transition-all ${metadata.isInConstruction ? "hover:border-border-glow-warning" : "hover:border-border-glow"} animate-card-enter ${delayClass} ${inView ? 'is-visible' : ''}`}>
+            className={`${metadata.imgproject !== undefined ? 'max-h-220' : 'qw:max-w-[47.9%] max-h-120'} mx-auto qw:h-90 w-full h-auto rounded-xl flex qw:flex-row flex-col-reverse justify-between p-5 bg-card border border-border-subtle shadow-lg transition-all ${metadata.isInConstruction ? "hover:border-border-glow-warning" : "hover:border-border-glow"} animate-card-enter ${delayClass} ${inView ? 'is-visible' : ''}`}>
 
             <div className={`${metadata.imgproject === undefined ? '' : 'qw:w-[50%] '} h-full w-full flex flex-col mt-3 qw:mt-0 items-start gap-1`}>
 
@@ -28,13 +28,13 @@ export function ProjectCard({ metadata, translations, labels, index }: ProjectCa
                     />
                 )}
 
-                <Title2 txt={metadata.title} className="text-main mt-1" />
+                <Title2 txt={metadata.title} className="text-main mt-1 text-2xl!" />
 
-                <Paragraph className="h-full text-dim" txt={activeTxt} />
+                <Paragraph className="h-full text-dim text-[0.97rem]!" txt={activeTxt} />
 
                 <div className="flex flex-col gap-2 w-full">
                     {/* Links GitHub / Live Demo — ahora con underline + iconos */}
-                    <div className="flex justify-start gap-3">
+                    <div className="flex justify-start gap-3 mt-5">
                         <LinkButton
                             className={`flex items-center gap-1.5 text-sm text-dim hover:text-accent underline underline-offset-4 decoration-border-subtle hover:decoration-accent transition-colors ${inConstruction}`}
                             txt="GitHub"
@@ -50,7 +50,7 @@ export function ProjectCard({ metadata, translations, labels, index }: ProjectCa
                         />
                     </div>
 
-                    <div className="w-full flex justify-between items-center gap-3" >
+                    <div className="w-full flex justify-between items-center gap-3 mt-2" >
                         {/* Tech icons más grandes (size-10) con label visible */}
                         <div className="flex qw:gap-3 gap-4 items-center">
                             {translations.tecnologies.map((item, index) => (

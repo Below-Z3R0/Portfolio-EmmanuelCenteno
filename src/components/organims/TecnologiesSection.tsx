@@ -6,7 +6,7 @@ export function TecnologiesSection({ translations, skills }: TecnologiesSectionP
   const categories = ["Frontend", "Backend", "DevOps"] as const;
 
   return (
-    <section id='Tecnologies' className='flex flex-col gap-10 max-w-241.5 mx-auto py-20 px-5 relative'>
+    <section id='Tecnologies' className=' object-center flex flex-col gap-10 py-20 px-5 relative'>
       {/* Cabecera de la sección */}
       <div className='flex items-start flex-col gap-4'>
         <MiniTitleAnimation>

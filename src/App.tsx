@@ -32,7 +32,7 @@ function App() {
   const footerContent = GeneralData.footersection[language];
 
   return (
-    <div className='text-main min-h-screen font-display relative'>
+    <div className='text-main font-display'>
       {/* Background decorativo — glows + grid de puntos */}
       <BackgroundFX />
 
@@ -108,7 +108,7 @@ function App() {
         </FadeUp>
       </main>
 
-      <footer className='py-20 flex flex-col items-center gap-8 px-5 max-w-241.5 mx-auto border-t border-border-subtle/50 mt-20'>
+      <footer className='py-20 flex flex-col items-center gap-8 px-5 max-w-280 mx-auto border-t border-border-subtle/50 mt-20'>
         <nav aria-label="Navegación del pie de página" className='flex flex-wrap justify-center gap-6'>
           {[
             { id: 'about', href: '#AboutMe', label: footerContent.navLinks.about },

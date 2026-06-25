@@ -4,7 +4,7 @@ import type { ProjectsSectionProps } from '../types';
 
 export function ProjectsSection({ translations, projects, language, labels }: ProjectsSectionProps) {
     return (
-        <section id='Proyects' className='flex flex-col py-25 gap-10 max-w-241.5 mx-auto px-5 relative'>
+        <section id='Proyects' className='flex flex-col py-25 gap-10 px-5 relative'>
             {/* Cabecera de la sección */}
             <div className='flex items-start flex-col gap-4'>
                 <MiniTitleAnimation>

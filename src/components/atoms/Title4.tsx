@@ -1,6 +1,6 @@
 export function Title4({ txt, className }: { txt: string, className?: string }) {
     return (
-        <h1 className={`${className} text-xl text-wrap: balance tracking-tight text-left`}>
+        <h1 className={`text-xl text-wrap: balance tracking-tight text-left ${className} `}>
             {txt}
         </h1>
     )

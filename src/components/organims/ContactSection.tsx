@@ -3,7 +3,7 @@ import type { ContactSectionProps } from '../types';
 
 export function ContactSection({ translations, contacts, formTranslations }: ContactSectionProps) {
   return (
-    <section id='Contact' className='section flex flex-col gap-4 max-w-241.5 mx-auto py-20 px-5'>
+    <section id='Contact' className='section flex flex-col gap-4 py-20 px-5'>
       <div className='rounded-3xl flex qw:flex-row flex-col qw:justify-between gap-10 max-ww:p-0 p-12 bg-card border border-border-subtle shadow-2xl relative overflow-hidden'>
 
         <div className='absolute -top-24 -right-24 size-64 bg-accent/5 rounded-full blur-3xl'></div>

@@ -4,7 +4,7 @@ import type { AboutMeSectionProps } from '../types';
 
 export function AboutMeSection({ translations, imageSrc = 'ImgCV.jpg' }: AboutMeSectionProps) {
   return (
-    <section id='AboutMe' className='section flex lg:flex-nowrap lg:flex-row flex-col-reverse flex-wrap max-w-241.5 mx-auto py-32 px-5 relative'>
+    <section id='AboutMe' className='section flex lg:flex-nowrap lg:flex-row flex-col-reverse flex-wrap py-32 px-5 relative'>
       <SlideInLeft className='qw:max-w[60%] w-full flex items-start flex-col gap-4'>
         {/* Títulos */}
         <MiniTitleAnimation>

@@ -6,6 +6,7 @@
   --color-card: var(--bg-card);
   --color-surface: var(--bg-surface);
   --color-main: var(--text-main);
+  --color-mainmuted: var(--bg-muted);
   --color-dim: var(--text-body);
   --color-muted: var(--text-muted);
   --color-accent: var(--accent);
@@ -30,6 +31,7 @@
   --bg-page: #09090b;
   --bg-card: #121214;
   --bg-surface: #18181b;
+  --bg-muted: #0b1121;
 
   --text-main: #fafafa;
   --text-body: #a1a1aa;
@@ -55,6 +57,7 @@
   --bg-page: #fafaf9;
   --bg-card: #ffffff;
   --bg-surface: #f4f4f5;
+  --bg-muted: #3c3c64;
 
   --text-main: #09090b;
   --text-body: #3f3f46;
@@ -77,7 +80,7 @@
 }
 
 #root {
-  width: 1126px;
+  width: 1100px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -125,11 +128,9 @@ a {
    - Light: líneas finas tipo Postman
    =========================================== */
 .bg-grid-dark {
-  background-image: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.06) 1px,
-    transparent 1px
-  );
+  background-image: radial-gradient(circle,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -217,9 +218,17 @@ input {
 
 /* Animación de fade-in para cambios de texto en ProjectCard */
 @keyframes fadein {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 .animate-fadein {
   animation: fadein 0.25s ease-out;
 }
@@ -236,28 +245,47 @@ input {
     transform: translateY(60px) scale(0.92);
     filter: blur(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
   }
 }
+
 /* Estado base: la card está oculta ANTES de que se aplique la animación */
 .animate-card-enter {
   opacity: 0;
   transform: translateY(60px) scale(0.92);
 }
+
 .animate-card-enter.is-visible {
   animation: card-enter 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-.animate-card-enter-delay-1.is-visible { animation-delay: 0.1s; }
-.animate-card-enter-delay-2.is-visible { animation-delay: 0.2s; }
-.animate-card-enter-delay-3.is-visible { animation-delay: 0.3s; }
-.animate-card-enter-delay-4.is-visible { animation-delay: 0.4s; }
-.animate-card-enter-delay-5.is-visible { animation-delay: 0.5s; }
+
+.animate-card-enter-delay-1.is-visible {
+  animation-delay: 0.1s;
+}
+
+.animate-card-enter-delay-2.is-visible {
+  animation-delay: 0.2s;
+}
+
+.animate-card-enter-delay-3.is-visible {
+  animation-delay: 0.3s;
+}
+
+.animate-card-enter-delay-4.is-visible {
+  animation-delay: 0.4s;
+}
+
+.animate-card-enter-delay-5.is-visible {
+  animation-delay: 0.5s;
+}
 
 /* Respeta usuarios con reduced-motion */
 @media (prefers-reduced-motion: reduce) {
+
   .animate-card-enter,
   .animate-fadein {
     opacity: 1 !important;

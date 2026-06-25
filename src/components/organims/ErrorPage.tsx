@@ -6,7 +6,7 @@ export function ErrorPage ({
   onRetry
 }: ErrorStateProps) {
   return (
-    <div className="min-h-[60vh] w-full flex items-center justify-center p-6">
+    <div className="min-h-screen w-full flex items-center justify-center p-6">
       <div className="max-w-md w-full bg-card border border-border-subtle rounded-2xl p-8 shadow-xl flex flex-col items-center text-center space-y-6 animate-in fade-in zoom-in duration-300">
         
         {/* Icono con resplandor de advertencia */}

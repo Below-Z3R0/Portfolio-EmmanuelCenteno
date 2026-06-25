@@ -4,7 +4,7 @@ import type { HeroSectionProps } from '../types';
 
 export function HeroSection({ translations, metadata, imageSrc = 'ImgCV.jpg' }: HeroSectionProps) {
   return (
-    <section id="Home" className='qw:py-50 max-w-241.5 mx-auto px-5 relative'>
+    <section id="Home" className='qw:py-50 px-5 relative'>
       <StaggerContainer className='gap-4 flex flex-col justify-start items-start h-full'>
         {/* Header: Foto y Status */}
         <StaggerItem>
